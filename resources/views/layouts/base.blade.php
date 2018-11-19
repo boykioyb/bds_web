@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="zxx">
+<html lang="{{ app()->getLocale() }}">
 
 <head>
     <meta charset="UTF-8">
@@ -10,344 +10,32 @@
     <title>Find Houses - HTML5 Template</title>
     <!-- FAVICON -->
     <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
-    <link rel="stylesheet" href="css/jquery-ui.css">
+    <link rel="stylesheet" href="{{ asset('css/jquery-ui.css') }}">
     <!-- GOOGLE FONTS -->
     <link href="https://fonts.googleapis.com/css?family=Lato:300,300i,400,400i%7CMontserrat:600,800" rel="stylesheet">
     <!-- FONT AWESOME -->
-    <link rel="stylesheet" href="css/fontawesome-all.min.css">
-    <link rel="stylesheet" href="css/font-awesome.min.css">
-    <!-- Slider Revolution CSS Files -->
-    <link rel="stylesheet" href="revolution/css/settings.css">
-    <link rel="stylesheet" href="revolution/css/layers.css">
-    <link rel="stylesheet" href="revolution/css/navigation.css">
+    <link rel="stylesheet" href="{{ asset('css/fontawesome-all.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/font-awesome.min.css') }}">
+    <!-- Slider owl CSS Files -->
+    <link rel="stylesheet" href="{{ asset('css/owl.carousel.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/owl.theme.default.min.css') }}">
     <!-- ARCHIVES CSS -->
-    <link rel="stylesheet" href="css/search.css">
-    <link rel="stylesheet" href="css/animate.css">
-    <link rel="stylesheet" href="css/magnific-popup.css">
-    <link rel="stylesheet" href="css/lightcase.css">
-    <link rel="stylesheet" href="css/owl-carousel.css">
-    <link rel="stylesheet" href="css/owl.carousel.min.css">
-    <link rel="stylesheet" href="css/bootstrap.css">
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" id="color" href="css/default.css">
+    <link rel="stylesheet" href="{{ asset('css/search.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/animate.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/magnific-popup.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/lightcase.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/bootstrap.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/styles.css') }}">
+    <link rel="stylesheet" id="color" href="{{asset('css/default.css')}}">
+    @yield('css')
 </head>
 
 <body>
 <!-- START SECTION HEADINGS -->
-<div class="header">
-    <div class="header-top">
-        <div class="container">
-            <div class="top-info hidden-sm-down">
-                <div class="call-header">
-                    <p><i class="fa fa-phone" aria-hidden="true"></i> (234) 0200 17813</p>
-                </div>
-                <div class="address-header">
-                    <p><i class="fa fa-map-marker" aria-hidden="true"></i> 95 South Park Ave, USA</p>
-                </div>
-                <div class="mail-header">
-                    <p><i class="fa fa-envelope" aria-hidden="true"></i> info@findhouses.com</p>
-                </div>
-            </div>
-            <div class="top-social hidden-sm-down">
-                <div class="login-wrap">
-                    <ul class="d-flex">
-                        <li><a href="login.html"><i class="fa fa-user"></i> Login</a></li>
-                        <li><a href="register.html"><i class="fa fa-sign-in"></i> Register</a></li>
-                    </ul>
-                </div>
-                <div class="social-icons-header">
-                    <div class="social-icons">
-                        <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-                        <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-                        <a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a>
-                    </div>
-                </div>
-                <div class="dropdown">
-                    <button class="btn-dropdown dropdown-toggle" type="button" id="dropdownlang" data-toggle="dropdown" aria-haspopup="true">
-                        <img src="images/en.png" alt="lang" /> English
-                    </button>
-                    <ul class="dropdown-menu" aria-labelledby="dropdownlang">
-                        <li><img src="images/fr.png" alt="lang" />France</li>
-                        <li><img src="images/de.png" alt="lang" /> German</li>
-                        <li><img src="images/it.png" alt="lang" />Italy</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="header-bottom heading sticky-header" id="heading">
-        <div class="container">
-            <a href="index.html" class="logo">
-                <img src="images/logo.svg" alt="realhome">
-            </a>
-            <button type="button" class="search-button" data-toggle="collapse" data-target="#bloq-search" aria-expanded="false">
-                <i class="fa fa-search" aria-hidden="true"></i>
-            </button>
-            <div class="get-quote hidden-lg-down">
-                <a href="submit-property.html">
-                    <p>Submit Property</p>
-                </a>
-            </div>
-            <button type="button" class="button-menu hidden-lg-up" data-toggle="collapse" data-target="#main-menu" aria-expanded="false">
-                <i class="fa fa-bars" aria-hidden="true"></i>
-            </button>
-
-            <form action="#" id="bloq-search" class="collapse">
-                <div class="bloq-search">
-                    <input type="text" placeholder="search...">
-                    <input type="submit" value="Search">
-                </div>
-            </form>
-
-            <nav id="main-menu" class="collapse">
-                <ul>
-                    <!-- STAR COLLAPSE MOBILE MENU -->
-                    <li class="hidden-lg-up">
-                        <div class="po">
-                            <a data-toggle="collapse" href="#home" aria-expanded="false">Home</a>
-                        </div>
-                        <div class="collapse" id="home">
-                            <div class="card card-block">
-                                <a class="dropdown-item" href="index.html">Home Map</a>
-                                <a class="dropdown-item" href="index-2.html">Home Image</a>
-                                <a class="dropdown-item" href="index-3.html">Home Video</a>
-                                <a class="dropdown-item" href="index-4.html">Home Slider</a>
-                                <a class="dropdown-item" href="index-5.html">Horizontal Search</a>
-                                <a class="dropdown-item" href="index-6.html">Parallax Image</a>
-                                <a class="dropdown-item" href="index-7.html">Home 3D Video</a>
-                                <a class="dropdown-item" href="index-8.html">Home Full Slider</a>
-                            </div>
-                        </div>
-                    </li>
-                    <!-- END COLLAPSE MOBILE MENU -->
-                    <li class="dropdown hidden-md-down">
-                        <a class="active dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="#">Home</a>
-                        <div class="dropdown-menu">
-                            <a class="dropdown-item" href="index.html">Home Map</a>
-                            <a class="dropdown-item" href="index-2.html">Home Image</a>
-                            <a class="dropdown-item" href="index-3.html">Home Video</a>
-                            <a class="dropdown-item" href="index-4.html">Home Slider</a>
-                            <a class="dropdown-item" href="index-5.html">Horizontal Search</a>
-                            <a class="dropdown-item" href="index-6.html">Parallax Image</a>
-                            <a class="dropdown-item" href="index-7.html">Home 3D Video</a>
-                            <a class="dropdown-item" href="index-8.html">Home Full Slider</a>
-                        </div>
-                    </li>
-                    <!-- STAR COLLAPSE MOBILE MENU -->
-                    <li class="hidden-lg-up">
-                        <div class="po">
-                            <a data-toggle="collapse" href="#listing" aria-expanded="false">Properties</a>
-                        </div>
-                        <div class="collapse" id="listing">
-                            <div class="card card-block">
-                                <a class="dropdown-item" href="properties-full-list.html">Full List</a>
-                                <a class="dropdown-item" href="properties-list-right-sidebar.html">List Right Sidebar </a>
-                                <a class="dropdown-item" href="properties-full-grid.html">Full Grid</a>
-                                <a class="dropdown-item" href="properties-grid-right-sidebar.html">Grid Right Sidebar</a>
-                                <a class="dropdown-item" href="properties-half-map.html">Half Map</a>
-                                <a class="dropdown-item" href="properties-map.html">Listing With Map</a>
-                                <a class="dropdown-item" href="properties-details.html">Property Details</a>
-                            </div>
-                        </div>
-                    </li>
-                    <!-- END COLLAPSE MOBILE MENU -->
-                    <li class="dropdown hidden-md-down">
-                        <a class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="#">Properties</a>
-                        <div class="dropdown-menu">
-                            <a class="dropdown-item" href="properties-full-list.html">Full List</a>
-                            <a class="dropdown-item" href="properties-list-right-sidebar.html">List Right Sidebar </a>
-                            <a class="dropdown-item" href="properties-full-grid.html">Full Grid</a>
-                            <a class="dropdown-item" href="properties-grid-right-sidebar.html">Grid Right Sidebar</a>
-                            <a class="dropdown-item" href="properties-half-map.html">Half Map</a>
-                            <a class="dropdown-item" href="properties-map.html">Listing With Map</a>
-                            <a class="dropdown-item" href="properties-details.html">Property Details</a>
-                        </div>
-                    </li>
-                    <!-- STAR COLLAPSE MOBILE MENU -->
-                    <li class="hidden-lg-up">
-                        <div class="po">
-                            <a data-toggle="collapse" href="#services" aria-expanded="false">Agents</a>
-                        </div>
-                        <div class="collapse" id="services">
-                            <div class="card card-block">
-                                <a class="dropdown-item" href="agents-listing-grid.html">Agents Listing Grid</a>
-                                <a class="dropdown-item" href="agents-listing-row.html">Agents Listing Row</a>
-                                <a class="dropdown-item" href="agent-details.html">Agent Details</a>
-                            </div>
-                        </div>
-                    </li>
-                    <!-- END COLLAPSE MOBILE MENU -->
-                    <li class="dropdown hidden-md-down">
-                        <a class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="#">Agents</a>
-                        <div class="dropdown-menu">
-                            <a class="dropdown-item" href="agents-listing-grid.html">Agents Listing Grid</a>
-                            <a class="dropdown-item" href="agents-listing-row.html">Agents Listing Row</a>
-                            <a class="dropdown-item" href="agent-details.html">Agent Details</a>
-                        </div>
-                    </li>
-                    <!-- STAR COLLAPSE MOBILE MENU -->
-                    <li class="hidden-lg-up">
-                        <div class="po">
-                            <a data-toggle="collapse" href="#about" aria-expanded="false">Pages</a>
-                        </div>
-                        <div class="collapse" id="about">
-                            <div class="card card-block">
-                                <a class="dropdown-item" href="about.html">About Us</a>
-                                <a class="dropdown-item" href="faq.html">Faq</a>
-                                <a class="dropdown-item" href="pricing-table.html">Pricing</a>
-                                <a class="dropdown-item" href="404.html">404</a>
-                                <a class="dropdown-item" href="login.html">Login</a>
-                                <a class="dropdown-item" href="register.html">Register</a>
-                                <a class="dropdown-item" href="coming-soon.html">Coming Soon</a>
-                                <a class="dropdown-item" href="under-construction.html">Under Construction</a>
-                            </div>
-                        </div>
-                    </li>
-                    <!-- END COLLAPSE MOBILE MENU -->
-                    <li class="dropdown hidden-md-down">
-                        <a class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="#">Pages</a>
-                        <div class="dropdown-menu">
-                            <a class="dropdown-item" href="about.html">About Us</a>
-                            <a class="dropdown-item" href="faq.html">Faq</a>
-                            <a class="dropdown-item" href="pricing-table.html">Pricing</a>
-                            <a class="dropdown-item" href="404.html">404</a>
-                            <a class="dropdown-item" href="login.html">Login</a>
-                            <a class="dropdown-item" href="register.html">Register</a>
-                            <a class="dropdown-item" href="coming-soon.html">Coming Soon</a>
-                            <a class="dropdown-item" href="under-construction.html">Under Construction</a>
-                        </div>
-                    </li>
-                    <!-- STAR COLLAPSE MOBILE MENU -->
-                    <li class="hidden-lg-up">
-                        <div class="po">
-                            <a data-toggle="collapse" href="#blog" aria-expanded="false">Blog</a>
-                        </div>
-                        <div class="collapse" id="blog">
-                            <div class="card card-block">
-                                <a class="dropdown-item" href="blog.html">Blog Default</a>
-                                <a class="dropdown-item" href="blog-rightsidebar.html">Blog Right Sidebar</a>
-                                <a class="dropdown-item" href="blog-details.html">Blog Details</a>
-                            </div>
-                        </div>
-                    </li>
-                    <!-- END COLLAPSE MOBILE MENU -->
-                    <li class="dropdown hidden-md-down">
-                        <a class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="#">Blog</a>
-                        <div class="dropdown-menu">
-                            <a class="dropdown-item" href="blog.html">Blog Default</a>
-                            <a class="dropdown-item" href="blog-rightsidebar.html">Blog Right Sidebar</a>
-                            <a class="dropdown-item" href="blog-details.html">Blog Details</a>
-                        </div>
-                    </li>
-                    <li><a href="contact-us.html">Contact</a></li>
-                </ul>
-            </nav>
-        </div>
-    </div>
-</div>
+@include('layouts.header')
 
 <!-- STAR HEADER SEARCH -->
-<section id="hero-area" class="parallax-search overlay" data-stellar-background-ratio="0.5">
-    <div class="hero-main">
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <div class="hero-inner">
-                        <!-- Welcome Text -->
-                        <div class="welcome-text">
-                            <h1>Find Your Dream Home</h1>
-                            <p>We have over million properties for you</p>
-                        </div>
-                        <!--/ End Welcome Text -->
-                        <!-- Search Form -->
-                        <div class="trip-search">
-                            <form class="form">
-                                <!-- Form Location -->
-                                <div class="form-group location">
-                                    <div class="nice-select form-control wide" tabindex="0"><span class="current"><i class="fa fa-map-marker"></i>Location</span>
-                                        <ul class="list">
-                                            <li data-value="1" class="option selected ">New York</li>
-                                            <li data-value="2" class="option">Los Angeles</li>
-                                            <li data-value="3" class="option">Chicago</li>
-                                            <li data-value="3" class="option">Philadelphia</li>
-                                            <li data-value="3" class="option">San Francisco</li>
-                                            <li data-value="3" class="option">Miami</li>
-                                            <li data-value="3" class="option">Houston</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <!--/ End Form Location -->
-                                <!-- Form Property Type -->
-                                <div class="form-group">
-                                    <div class="nice-select form-control wide" tabindex="0"><span class="current"><i class="fa fa-home"></i>Property Type</span>
-                                        <ul class="list">
-                                            <li data-value="1" class="option selected ">Family House</li>
-                                            <li data-value="2" class="option">Apartment</li>
-                                            <li data-value="3" class="option">Condo</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <!--/ End Form Property Type -->
-                                <!-- Form Property Status -->
-                                <div class="form-group duration">
-                                    <div class="nice-select form-control wide" tabindex="0"><span class="current"><i class="fa fa-home"></i>Property Status</span>
-                                        <ul class="list">
-                                            <li data-value="1" class="option selected ">For Sale</li>
-                                            <li data-value="2" class="option">For Rent</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <!--/ End Form Property Status -->
-                                <!-- Form Bedrooms -->
-                                <div class="form-group">
-                                    <div class="nice-select form-control wide" tabindex="0"><span class="current"><i class="fa fa-bed" aria-hidden="true"></i>Any Bedrooms</span>
-                                        <ul class="list">
-                                            <li data-value="1" class="option selected">1</li>
-                                            <li data-value="2" class="option">2</li>
-                                            <li data-value="3" class="option">3</li>
-                                            <li data-value="3" class="option">4</li>
-                                            <li data-value="3" class="option">5</li>
-                                            <li data-value="3" class="option">6</li>
-                                            <li data-value="3" class="option">7</li>
-                                            <li data-value="3" class="option">8</li>
-                                            <li data-value="3" class="option">9</li>
-                                            <li data-value="3" class="option">10</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <!--/ End Form Bedrooms -->
-                                <!-- Form Bathrooms -->
-                                <div class="form-group">
-                                    <div class="nice-select form-control wide" tabindex="0"><span class="current"><i class="fa fa-bath" aria-hidden="true"></i>Any Bathrooms</span>
-                                        <ul class="list">
-                                            <li data-value="1" class="option selected">1</li>
-                                            <li data-value="2" class="option">2</li>
-                                            <li data-value="3" class="option">3</li>
-                                            <li data-value="3" class="option">4</li>
-                                            <li data-value="3" class="option">5</li>
-                                            <li data-value="3" class="option">6</li>
-                                            <li data-value="3" class="option">7</li>
-                                            <li data-value="3" class="option">8</li>
-                                            <li data-value="3" class="option">9</li>
-                                            <li data-value="3" class="option">10</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <!--/ End Form Bathrooms -->
-                                <!-- Form Button -->
-                                <div class="form-group button">
-                                    <button type="submit" class="btn">Search</button>
-                                </div>
-                                <!--/ End Form Button -->
-                            </form>
-                        </div>
-                        <!--/ End Search Form -->
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
+@include('layouts.header_search')
 <!-- END HEADER SEARCH -->
 
 <!-- START SECTION RECENTLY PROPERTIES -->
@@ -362,12 +50,15 @@
                 <div class="project-single">
                     <div class="project-inner project-head">
                         <div class="project-bottom">
-                            <h4><a href="properties-details.html">View Property</a><span class="category">Real Estate</span></h4>
+                            <h4><a href="properties-details.html">View Property</a><span
+                                    class="category">Real Estate</span></h4>
                         </div>
                         <div class="button-effect">
                             <a href="properties-details.html" class="btn"><i class="fa fa-link"></i></a>
-                            <a href="https://www.youtube.com/watch?v=2xHQqYRcrx4" class="btn popup-video popup-youtube"><i class="fas fa-video"></i></a>
-                            <a class="img-poppu btn" href="images/feature-properties/fp-1.jpg" data-rel="lightcase:myCollection:slideshow"><i class="fa fa-photo"></i></a>
+                            <a href="https://www.youtube.com/watch?v=2xHQqYRcrx4" class="btn popup-video popup-youtube"><i
+                                    class="fas fa-video"></i></a>
+                            <a class="img-poppu btn" href="images/feature-properties/fp-1.jpg"
+                               data-rel="lightcase:myCollection:slideshow"><i class="fa fa-photo"></i></a>
                         </div>
                         <div class="homes">
                             <!-- homes img -->
@@ -439,12 +130,15 @@
                 <div class="project-single">
                     <div class="project-inner project-head">
                         <div class="project-bottom">
-                            <h4><a href="properties-details.html">View Property</a><span class="category">Real Estate</span></h4>
+                            <h4><a href="properties-details.html">View Property</a><span
+                                    class="category">Real Estate</span></h4>
                         </div>
                         <div class="button-effect">
                             <a href="properties-details.html" class="btn"><i class="fa fa-link"></i></a>
-                            <a href="https://www.youtube.com/watch?v=2xHQqYRcrx4" class="btn popup-video popup-youtube"><i class="fas fa-video"></i></a>
-                            <a class="img-poppu btn" href="images/feature-properties/fp-2.jpg" data-rel="lightcase:myCollection:slideshow"><i class="fa fa-photo"></i></a>
+                            <a href="https://www.youtube.com/watch?v=2xHQqYRcrx4" class="btn popup-video popup-youtube"><i
+                                    class="fas fa-video"></i></a>
+                            <a class="img-poppu btn" href="images/feature-properties/fp-2.jpg"
+                               data-rel="lightcase:myCollection:slideshow"><i class="fa fa-photo"></i></a>
                         </div>
                         <div class="homes">
                             <!-- homes img -->
@@ -516,12 +210,15 @@
                 <div class="project-single no-mb mbp-3">
                     <div class="project-inner project-head">
                         <div class="project-bottom">
-                            <h4><a href="properties-details.html">View Property</a><span class="category">Real Estate</span></h4>
+                            <h4><a href="properties-details.html">View Property</a><span
+                                    class="category">Real Estate</span></h4>
                         </div>
                         <div class="button-effect">
                             <a href="properties-details.html" class="btn"><i class="fa fa-link"></i></a>
-                            <a href="https://www.youtube.com/watch?v=2xHQqYRcrx4" class="btn popup-video popup-youtube"><i class="fas fa-video"></i></a>
-                            <a class="img-poppu btn" href="images/feature-properties/fp-3.jpg" data-rel="lightcase:myCollection:slideshow"><i class="fa fa-photo"></i></a>
+                            <a href="https://www.youtube.com/watch?v=2xHQqYRcrx4" class="btn popup-video popup-youtube"><i
+                                    class="fas fa-video"></i></a>
+                            <a class="img-poppu btn" href="images/feature-properties/fp-3.jpg"
+                               data-rel="lightcase:myCollection:slideshow"><i class="fa fa-photo"></i></a>
                         </div>
                         <div class="homes">
                             <!-- homes img -->
@@ -593,12 +290,15 @@
                 <div class="project-single no-mb">
                     <div class="project-inner project-head">
                         <div class="project-bottom">
-                            <h4><a href="properties-details.html">View Property</a><span class="category">Real Estate</span></h4>
+                            <h4><a href="properties-details.html">View Property</a><span
+                                    class="category">Real Estate</span></h4>
                         </div>
                         <div class="button-effect">
                             <a href="properties-details.html" class="btn"><i class="fa fa-link"></i></a>
-                            <a href="https://www.youtube.com/watch?v=2xHQqYRcrx4" class="btn popup-video popup-youtube"><i class="fas fa-video"></i></a>
-                            <a class="img-poppu btn" href="images/feature-properties/fp-4.jpg" data-rel="lightcase:myCollection:slideshow"><i class="fa fa-photo"></i></a>
+                            <a href="https://www.youtube.com/watch?v=2xHQqYRcrx4" class="btn popup-video popup-youtube"><i
+                                    class="fas fa-video"></i></a>
+                            <a class="img-poppu btn" href="images/feature-properties/fp-4.jpg"
+                               data-rel="lightcase:myCollection:slideshow"><i class="fa fa-photo"></i></a>
                         </div>
                         <div class="homes">
                             <!-- homes img -->
@@ -681,7 +381,9 @@
                     <h4>THE BEST PLACE TO FIND THE HOUSE YOU WANT.</h4>
                 </div>
                 <div class="welcome-content">
-                    <p>The best place for elit, sed do eiusmod tempor dolor sit amet, conse ctetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et lorna aliquatd minimam, quis nostrud exercitation oris nisi ut aliquip ex ea.</p>
+                    <p>The best place for elit, sed do eiusmod tempor dolor sit amet, conse ctetur adipiscing elit, sed
+                        do eiusmod tempor incididunt ut labore et lorna aliquatd minimam, quis nostrud exercitation oris
+                        nisi ut aliquip ex ea.</p>
                 </div>
                 <div class="welcome-services">
                     <div class="row">
@@ -769,8 +471,10 @@
                     </div>
                     <div class="agent-section p-top-35 p-bottom-30 p-right-25 p-left-25">
                         <h4 class="m-bottom-15 text-bold-700">Houses</h4>
-                        <p>Nonec pede justo fringilla vel aliquet nec vulputate eget arcu in enim justo rhoncus ut imperdiet venenatis vitae justo.</p>
-                        <a class="text-base text-base-dark-hover text-size-13" href="properties-full-list.html">Read More <i class="fa fa-long-arrow-right"></i></a>
+                        <p>Nonec pede justo fringilla vel aliquet nec vulputate eget arcu in enim justo rhoncus ut
+                            imperdiet venenatis vitae justo.</p>
+                        <a class="text-base text-base-dark-hover text-size-13" href="properties-full-list.html">Read
+                            More <i class="fa fa-long-arrow-right"></i></a>
                     </div>
                 </div>
             </div>
@@ -781,8 +485,10 @@
                     </div>
                     <div class="agent-section p-top-35 p-bottom-30 p-right-25 p-left-25">
                         <h4 class="m-bottom-15 text-bold-700">Apartments</h4>
-                        <p>Nonec pede justo fringilla vel aliquet nec vulputate eget arcu in enim justo rhoncus ut imperdiet venenatis vitae justo.</p>
-                        <a class="text-base text-base-dark-hover text-size-13" href="properties-full-list.html">Read More <i class="fa fa-long-arrow-right"></i></a>
+                        <p>Nonec pede justo fringilla vel aliquet nec vulputate eget arcu in enim justo rhoncus ut
+                            imperdiet venenatis vitae justo.</p>
+                        <a class="text-base text-base-dark-hover text-size-13" href="properties-full-list.html">Read
+                            More <i class="fa fa-long-arrow-right"></i></a>
                     </div>
                 </div>
             </div>
@@ -793,8 +499,10 @@
                     </div>
                     <div class="agent-section p-top-35 p-bottom-30 p-right-25 p-left-25">
                         <h4 class="m-bottom-15 text-bold-700">Commercial</h4>
-                        <p>Nonec pede justo fringilla vel aliquet nec vulputate eget arcu in enim justo rhoncus ut imperdiet venenatis vitae justo.</p>
-                        <a class="text-base text-base-dark-hover text-size-13" href="properties-full-list.html">Read More <i class="fa fa-long-arrow-right"></i></a>
+                        <p>Nonec pede justo fringilla vel aliquet nec vulputate eget arcu in enim justo rhoncus ut
+                            imperdiet venenatis vitae justo.</p>
+                        <a class="text-base text-base-dark-hover text-size-13" href="properties-full-list.html">Read
+                            More <i class="fa fa-long-arrow-right"></i></a>
                     </div>
                 </div>
             </div>
@@ -817,12 +525,15 @@
                 <div class="project-single">
                     <div class="project-inner project-head">
                         <div class="project-bottom">
-                            <h4><a href="properties-details.html">View Property</a><span class="category">Real Estate</span></h4>
+                            <h4><a href="properties-details.html">View Property</a><span
+                                    class="category">Real Estate</span></h4>
                         </div>
                         <div class="button-effect">
                             <a href="properties-details.html" class="btn"><i class="fa fa-link"></i></a>
-                            <a href="https://www.youtube.com/watch?v=2xHQqYRcrx4" class="btn popup-video popup-youtube"><i class="fas fa-video"></i></a>
-                            <a class="img-poppu btn" href="images/feature-properties/fp-1.jpg" data-rel="lightcase:myCollection:slideshow"><i class="fa fa-photo"></i></a>
+                            <a href="https://www.youtube.com/watch?v=2xHQqYRcrx4" class="btn popup-video popup-youtube"><i
+                                    class="fas fa-video"></i></a>
+                            <a class="img-poppu btn" href="images/feature-properties/fp-1.jpg"
+                               data-rel="lightcase:myCollection:slideshow"><i class="fa fa-photo"></i></a>
                         </div>
                         <div class="homes">
                             <!-- homes img -->
@@ -894,12 +605,15 @@
                 <div class="project-single">
                     <div class="project-inner project-head">
                         <div class="project-bottom">
-                            <h4><a href="properties-details.html">View Property</a><span class="category">Real Estate</span></h4>
+                            <h4><a href="properties-details.html">View Property</a><span
+                                    class="category">Real Estate</span></h4>
                         </div>
                         <div class="button-effect">
                             <a href="properties-details.html" class="btn"><i class="fa fa-link"></i></a>
-                            <a href="https://www.youtube.com/watch?v=2xHQqYRcrx4" class="btn popup-video popup-youtube"><i class="fas fa-video"></i></a>
-                            <a class="img-poppu btn" href="images/feature-properties/fp-2.jpg" data-rel="lightcase:myCollection:slideshow"><i class="fa fa-photo"></i></a>
+                            <a href="https://www.youtube.com/watch?v=2xHQqYRcrx4" class="btn popup-video popup-youtube"><i
+                                    class="fas fa-video"></i></a>
+                            <a class="img-poppu btn" href="images/feature-properties/fp-2.jpg"
+                               data-rel="lightcase:myCollection:slideshow"><i class="fa fa-photo"></i></a>
                         </div>
                         <div class="homes">
                             <!-- homes img -->
@@ -971,12 +685,15 @@
                 <div class="project-single">
                     <div class="project-inner project-head">
                         <div class="project-bottom">
-                            <h4><a href="properties-details.html">View Property</a><span class="category">Real Estate</span></h4>
+                            <h4><a href="properties-details.html">View Property</a><span
+                                    class="category">Real Estate</span></h4>
                         </div>
                         <div class="button-effect">
                             <a href="properties-details.html" class="btn"><i class="fa fa-link"></i></a>
-                            <a href="https://www.youtube.com/watch?v=2xHQqYRcrx4" class="btn popup-video popup-youtube"><i class="fas fa-video"></i></a>
-                            <a class="img-poppu btn" href="images/feature-properties/fp-3.jpg" data-rel="lightcase:myCollection:slideshow"><i class="fa fa-photo"></i></a>
+                            <a href="https://www.youtube.com/watch?v=2xHQqYRcrx4" class="btn popup-video popup-youtube"><i
+                                    class="fas fa-video"></i></a>
+                            <a class="img-poppu btn" href="images/feature-properties/fp-3.jpg"
+                               data-rel="lightcase:myCollection:slideshow"><i class="fa fa-photo"></i></a>
                         </div>
                         <div class="homes">
                             <!-- homes img -->
@@ -1048,12 +765,15 @@
                 <div class="project-single no-mb">
                     <div class="project-inner project-head">
                         <div class="project-bottom">
-                            <h4><a href="properties-details.html">View Property</a><span class="category">Real Estate</span></h4>
+                            <h4><a href="properties-details.html">View Property</a><span
+                                    class="category">Real Estate</span></h4>
                         </div>
                         <div class="button-effect">
                             <a href="properties-details.html" class="btn"><i class="fa fa-link"></i></a>
-                            <a href="https://www.youtube.com/watch?v=2xHQqYRcrx4" class="btn popup-video popup-youtube"><i class="fas fa-video"></i></a>
-                            <a class="img-poppu btn" href="images/feature-properties/fp-4.jpg" data-rel="lightcase:myCollection:slideshow"><i class="fa fa-photo"></i></a>
+                            <a href="https://www.youtube.com/watch?v=2xHQqYRcrx4" class="btn popup-video popup-youtube"><i
+                                    class="fas fa-video"></i></a>
+                            <a class="img-poppu btn" href="images/feature-properties/fp-4.jpg"
+                               data-rel="lightcase:myCollection:slideshow"><i class="fa fa-photo"></i></a>
                         </div>
                         <div class="homes">
                             <!-- homes img -->
@@ -1125,12 +845,15 @@
                 <div class="project-single no-mb">
                     <div class="project-inner project-head">
                         <div class="project-bottom">
-                            <h4><a href="properties-details.html">View Property</a><span class="category">Real Estate</span></h4>
+                            <h4><a href="properties-details.html">View Property</a><span
+                                    class="category">Real Estate</span></h4>
                         </div>
                         <div class="button-effect">
                             <a href="properties-details.html" class="btn"><i class="fa fa-link"></i></a>
-                            <a href="https://www.youtube.com/watch?v=2xHQqYRcrx4" class="btn popup-video popup-youtube"><i class="fas fa-video"></i></a>
-                            <a class="img-poppu btn" href="images/feature-properties/fp-5.jpg" data-rel="lightcase:myCollection:slideshow"><i class="fa fa-photo"></i></a>
+                            <a href="https://www.youtube.com/watch?v=2xHQqYRcrx4" class="btn popup-video popup-youtube"><i
+                                    class="fas fa-video"></i></a>
+                            <a class="img-poppu btn" href="images/feature-properties/fp-5.jpg"
+                               data-rel="lightcase:myCollection:slideshow"><i class="fa fa-photo"></i></a>
                         </div>
                         <div class="homes">
                             <!-- homes img -->
@@ -1202,12 +925,15 @@
                 <div class="project-single no-mb last">
                     <div class="project-inner project-head">
                         <div class="project-bottom">
-                            <h4><a href="properties-details.html">View Property</a><span class="category">Real Estate</span></h4>
+                            <h4><a href="properties-details.html">View Property</a><span
+                                    class="category">Real Estate</span></h4>
                         </div>
                         <div class="button-effect">
                             <a href="properties-details.html" class="btn"><i class="fa fa-link"></i></a>
-                            <a href="https://www.youtube.com/watch?v=2xHQqYRcrx4" class="btn popup-video popup-youtube"><i class="fas fa-video"></i></a>
-                            <a class="img-poppu btn" href="images/feature-properties/fp-6.jpg" data-rel="lightcase:myCollection:slideshow"><i class="fa fa-photo"></i></a>
+                            <a href="https://www.youtube.com/watch?v=2xHQqYRcrx4" class="btn popup-video popup-youtube"><i
+                                    class="fas fa-video"></i></a>
+                            <a class="img-poppu btn" href="images/feature-properties/fp-6.jpg"
+                               data-rel="lightcase:myCollection:slideshow"><i class="fa fa-photo"></i></a>
                         </div>
                         <div class="homes">
                             <!-- homes img -->
@@ -1354,7 +1080,7 @@
             <div class="col-lg-3 col-md-6 team-pro hover-effect">
                 <div class="team-wrap">
                     <div class="team-img">
-                        <img src="images/team/t-5.jpg" alt="" />
+                        <img src="images/team/t-5.jpg" alt=""/>
                     </div>
                     <div class="team-content">
                         <div class="team-info">
@@ -1363,7 +1089,8 @@
                             <div class="team-socials">
                                 <ul>
                                     <li>
-                                        <a href="#" title="facebook"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                                        <a href="#" title="facebook"><i class="fa fa-facebook"
+                                                                        aria-hidden="true"></i></a>
                                         <a href="#" title="twitter"><i class="fa fa-twitter" aria-hidden="true"></i></a>
                                         <a href="#" title="instagran"><i class="fa fa-instagram" aria-hidden="true"></i></a>
                                     </li>
@@ -1377,7 +1104,7 @@
             <div class="col-lg-3 col-md-6 team-pro hover-effect">
                 <div class="team-wrap">
                     <div class="team-img">
-                        <img src="images/team/t-6.jpg" alt="" />
+                        <img src="images/team/t-6.jpg" alt=""/>
                     </div>
                     <div class="team-content">
                         <div class="team-info">
@@ -1386,7 +1113,8 @@
                             <div class="team-socials">
                                 <ul>
                                     <li>
-                                        <a href="#" title="facebook"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                                        <a href="#" title="facebook"><i class="fa fa-facebook"
+                                                                        aria-hidden="true"></i></a>
                                         <a href="#" title="twitter"><i class="fa fa-twitter" aria-hidden="true"></i></a>
                                         <a href="#" title="instagran"><i class="fa fa-instagram" aria-hidden="true"></i></a>
                                     </li>
@@ -1400,7 +1128,7 @@
             <div class="col-lg-3 col-md-6 team-pro pb-none hover-effect">
                 <div class="team-wrap">
                     <div class="team-img">
-                        <img src="images/team/t-7.jpg" alt="" />
+                        <img src="images/team/t-7.jpg" alt=""/>
                     </div>
                     <div class="team-content">
                         <div class="team-info">
@@ -1409,7 +1137,8 @@
                             <div class="team-socials">
                                 <ul>
                                     <li>
-                                        <a href="#" title="facebook"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                                        <a href="#" title="facebook"><i class="fa fa-facebook"
+                                                                        aria-hidden="true"></i></a>
                                         <a href="#" title="twitter"><i class="fa fa-twitter" aria-hidden="true"></i></a>
                                         <a href="#" title="instagran"><i class="fa fa-instagram" aria-hidden="true"></i></a>
                                     </li>
@@ -1423,7 +1152,7 @@
             <div class="col-lg-3 col-md-6 team-pro hover-effect">
                 <div class="team-wrap">
                     <div class="team-img">
-                        <img src="images/team/t-8.jpg" alt="" />
+                        <img src="images/team/t-8.jpg" alt=""/>
                     </div>
                     <div class="team-content">
                         <div class="team-info">
@@ -1432,7 +1161,8 @@
                             <div class="team-socials">
                                 <ul>
                                     <li>
-                                        <a href="#" title="facebook"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                                        <a href="#" title="facebook"><i class="fa fa-facebook"
+                                                                        aria-hidden="true"></i></a>
                                         <a href="#" title="twitter"><i class="fa fa-twitter" aria-hidden="true"></i></a>
                                         <a href="#" title="instagran"><i class="fa fa-instagram" aria-hidden="true"></i></a>
                                     </li>
@@ -1651,7 +1381,8 @@
                     <li><i class="fa fa-star"></i>
                     </li>
                 </ul>
-                <p>Lorem ipsum dolor sit amet, ligula magna at etiam aliquip venenatis. Vitae sit felis donec, suscipit tortor et sapien donec.</p>
+                <p>Lorem ipsum dolor sit amet, ligula magna at etiam aliquip venenatis. Vitae sit felis donec, suscipit
+                    tortor et sapien donec.</p>
             </div>
             <div class="test-1">
                 <h3>Jhon Morris</h3>
@@ -1669,7 +1400,8 @@
                     <li><i class="fa fa-star-o"></i>
                     </li>
                 </ul>
-                <p>Lorem ipsum dolor sit amet, ligula magna at etiam aliquip venenatis. Vitae sit felis donec, suscipit tortor et sapien donec.</p>
+                <p>Lorem ipsum dolor sit amet, ligula magna at etiam aliquip venenatis. Vitae sit felis donec, suscipit
+                    tortor et sapien donec.</p>
             </div>
             <div class="test-1">
                 <h3>Mary Deshaw</h3>
@@ -1687,7 +1419,8 @@
                     <li><i class="fa fa-star"></i>
                     </li>
                 </ul>
-                <p>Lorem ipsum dolor sit amet, ligula magna at etiam aliquip venenatis. Vitae sit felis donec, suscipit tortor et sapien donec.</p>
+                <p>Lorem ipsum dolor sit amet, ligula magna at etiam aliquip venenatis. Vitae sit felis donec, suscipit
+                    tortor et sapien donec.</p>
             </div>
             <div class="test-1">
                 <h3>Gary Steven</h3>
@@ -1705,7 +1438,8 @@
                     <li><i class="fa fa-star-o"></i>
                     </li>
                 </ul>
-                <p>Lorem ipsum dolor sit amet, ligula magna at etiam aliquip venenatis. Vitae sit felis donec, suscipit tortor et sapien donec.</p>
+                <p>Lorem ipsum dolor sit amet, ligula magna at etiam aliquip venenatis. Vitae sit felis donec, suscipit
+                    tortor et sapien donec.</p>
             </div>
             <div class="test-1">
                 <h3>Cristy Mayer</h3>
@@ -1723,7 +1457,8 @@
                     <li><i class="fa fa-star"></i>
                     </li>
                 </ul>
-                <p>Lorem ipsum dolor sit amet, ligula magna at etiam aliquip venenatis. Vitae sit felis donec, suscipit tortor et sapien donec.</p>
+                <p>Lorem ipsum dolor sit amet, ligula magna at etiam aliquip venenatis. Vitae sit felis donec, suscipit
+                    tortor et sapien donec.</p>
             </div>
             <div class="test-1">
                 <h3>Ichiro Tasaka</h3>
@@ -1741,7 +1476,8 @@
                     <li><i class="fa fa-star-o"></i>
                     </li>
                 </ul>
-                <p>Lorem ipsum dolor sit amet, ligula magna at etiam aliquip venenatis. Vitae sit felis donec, suscipit tortor et sapien donec.</p>
+                <p>Lorem ipsum dolor sit amet, ligula magna at etiam aliquip venenatis. Vitae sit felis donec, suscipit
+                    tortor et sapien donec.</p>
             </div>
         </div>
     </div>
@@ -1824,7 +1560,8 @@
             <div class="row align-center">
                 <div class="col-lg-6 col-md-6">
                     <form class="realhome_form_subscribe mailchimp form-inline" method="post">
-                        <input type="email" id="subscribeEmail" name="EMAIL" class="form_email" placeholder="Enter Your Email">
+                        <input type="email" id="subscribeEmail" name="EMAIL" class="form_email"
+                               placeholder="Enter Your Email">
                         <button type="submit" value="Subscribe">Submit</button>
                         <label for="subscribeEmail" class="error"></label>
                         <p class="subscription-success"></p>
@@ -1846,7 +1583,9 @@
                         <a href="index.html" class="logo">
                             <img src="images/logo-footer.svg" alt="netcom">
                         </a>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus impedit perferendis, laudantium molestiae ipsam rem veniam facere quos! Temporibus, minima culpa deleniti magnam.</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus impedit perferendis,
+                            laudantium molestiae ipsam rem veniam facere quos! Temporibus, minima culpa deleniti
+                            magnam.</p>
                         <a href="about.html" class="btn btn-secondary">Read More...</a>
                     </div>
                 </div>
@@ -1960,7 +1699,7 @@
 </div>
 <!-- END PRELOADER -->
 <!--Style Switcher===========================================-->
-<div class="color-switcher" id="choose_color"> <a href="#." class="picker_close"><i class="fa fa-cog fa-spin fa-2x" ></i></a>
+<div class="color-switcher" id="choose_color"><a href="#." class="picker_close"><i class="fa fa-cog fa-spin fa-2x"></i></a>
     <div class="theme-colours">
         <p class="font-italic">Choose Colour style</p>
         <ul>
@@ -1999,12 +1738,11 @@
 </div>
 
 <!-- ARCHIVES JS -->
-<script src="js/jquery.min.js"></script>
-<script src="js/jquery-ui.js"></script>
-<script src="js/tether.min.js"></script>
-<script src="js/moment.js"></script>
-<script src="js/transition.min.js"></script>
-<script src="js/transition.min.js"></script>
+<script src="{{ asset('js/jquery.min.js') }}"></script>
+<script src="{{ asset('js/jquery-ui.js') }}"></script>
+<script src="{{ asset('js/tether.min.js') }}"></script>
+<script src="{{ asset('js/moment.js') }}"></script>
+<script src="{{ asset('js/transition.min.js') }}"></script>
 <script src="js/bootstrap.min.js"></script>
 <script src="js/fitvids.js"></script>
 <script src="js/jquery.waypoints.min.js"></script>
@@ -2023,19 +1761,7 @@
 <script src="js/searched.js"></script>
 <script src="js/forms-2.js"></script>
 <script src="js/color-switcher.js"></script>
-
-<!-- Slider Revolution scripts -->
-<script src="revolution/js/jquery.themepunch.tools.min.js"></script>
-<script src="revolution/js/jquery.themepunch.revolution.min.js"></script>
-<script src="revolution/js/extensions/revolution.extension.actions.min.js"></script>
-<script src="revolution/js/extensions/revolution.extension.carousel.min.js"></script>
-<script src="revolution/js/extensions/revolution.extension.kenburn.min.js"></script>
-<script src="revolution/js/extensions/revolution.extension.layeranimation.min.js"></script>
-<script src="revolution/js/extensions/revolution.extension.migration.min.js"></script>
-<script src="revolution/js/extensions/revolution.extension.navigation.min.js"></script>
-<script src="revolution/js/extensions/revolution.extension.parallax.min.js"></script>
-<script src="revolution/js/extensions/revolution.extension.slideanims.min.js"></script>
-<script src="revolution/js/extensions/revolution.extension.video.min.js"></script>
+<script src="js/owl.carousel.min.js"></script>
 
 <!-- MAIN JS -->
 <script src="js/script.js"></script>
