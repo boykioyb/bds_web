@@ -11,27 +11,30 @@ const mix = require('laravel-mix');
  |
  */
 
-mix.js([
-    'js/jquery.min.js',
-    'js/jquery-ui.js',
-    'js/tether.min.js',
-    'js/moment.js',
-    'js/transition.min.js',
-    'js/bootstrap.min.js',
-    'js/fitvids.js',
-    'js/jquery.waypoints.min.js',
-    'js/jquery.counterup.min.js',
-    'js/imagesloaded.pkgd.min.js',
-    'js/smooth-scroll.min.js',
-    'js/lightcase.js',
-    'js/search.js',
-    'js/owl.carousel.min.js',
-    'js/jquery.magnific-popup.min.js',
-    'js/ajaxchimp.min.js',
-    'js/newsletter.js',
-    'js/jquery.form.js',
-],'public/js/all.js');
+mix.combine([
+    'public/js/jquery.min.js',
+    'public/js/jquery-ui.js',
+    'public/js/tether.min.js',
+    'public/js/moment.js',
+    'public/js/transition.min.js',
+    'public/js/bootstrap.min.js',
+    'public/js/fitvids.js',
+    'public/js/jquery.waypoints.min.js',
+    'public/js/jquery.counterup.min.js',
+    'public/js/imagesloaded.pkgd.min.js',
+    'public/js/smooth-scroll.min.js',
+    'public/js/lightcase.js',
+    'public/js/isotope.pkgd.min.js',
+    'public/js/search.js',
+    'public/js/owl.carousel.min.js',
+    'public/js/jquery.magnific-popup.min.js',
+    'public/js/ajaxchimp.min.js',
+    'public/js/newsletter.js',
+    'public/js/jquery.form.js',
+    'public/js/jquery.validate.min.js',
+    'public/js/searched.js',
+    'public/js/forms-2.js',
+    'public/js/color-switcher.js',
+    'public/js/owl.carousel.js',
+], 'public/js/all.js', 'public/js');
 
-
-mix.js('resources/js/app.js', 'public/js')
-   .sass('resources/sass/app.scss', 'public/css');

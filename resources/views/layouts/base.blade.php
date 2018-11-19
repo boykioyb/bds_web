@@ -18,7 +18,7 @@
     <link rel="stylesheet" href="{{ asset('css/font-awesome.min.css') }}">
     <!-- Slider owl CSS Files -->
     <link rel="stylesheet" href="{{ asset('css/owl.carousel.min.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/owl.theme.default.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/owl.theme.default.css') }}">
     <!-- ARCHIVES CSS -->
     <link rel="stylesheet" href="{{ asset('css/search.css') }}">
     <link rel="stylesheet" href="{{ asset('css/animate.css') }}">
@@ -1738,33 +1738,10 @@
 </div>
 
 <!-- ARCHIVES JS -->
-<script src="{{ asset('js/jquery.min.js') }}"></script>
-<script src="{{ asset('js/jquery-ui.js') }}"></script>
-<script src="{{ asset('js/tether.min.js') }}"></script>
-<script src="{{ asset('js/moment.js') }}"></script>
-<script src="{{ asset('js/transition.min.js') }}"></script>
-<script src="js/bootstrap.min.js"></script>
-<script src="js/fitvids.js"></script>
-<script src="js/jquery.waypoints.min.js"></script>
-<script src="js/jquery.counterup.min.js"></script>
-<script src="js/imagesloaded.pkgd.min.js"></script>
-<script src="js/isotope.pkgd.min.js"></script>
-<script src="js/smooth-scroll.min.js"></script>
-<script src="js/lightcase.js"></script>
-<script src="js/search.js"></script>
-<script src="js/owl.carousel.js"></script>
-<script src="js/jquery.magnific-popup.min.js"></script>
-<script src="js/ajaxchimp.min.js"></script>
-<script src="js/newsletter.js"></script>
-<script src="js/jquery.form.js"></script>
-<script src="js/jquery.validate.min.js"></script>
-<script src="js/searched.js"></script>
-<script src="js/forms-2.js"></script>
-<script src="js/color-switcher.js"></script>
-<script src="js/owl.carousel.min.js"></script>
+<script src="{{ asset('js/all.js') }}"></script>
 
 <!-- MAIN JS -->
-<script src="js/script.js"></script>
+<script src="{{ asset('js/script.js') }}"></script>
 
 </body>
 
