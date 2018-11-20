@@ -18739,7 +18739,7 @@ textarea.border,
   width: 266px;
   position: fixed;
   right: -266px;
-  top: 300px;
+  top: 80px;
   z-index: 999;
   padding: 0px;
   -webkit-transition: all 500ms ease;
@@ -19188,6 +19188,7 @@ textarea.border,
     line-height: 0;
     bottom: 10px;
 }
+
 .owl-carousel-slider-top .owl-dot {
     border-radius: 75px;
     height: 15px;
@@ -19198,6 +19199,7 @@ textarea.border,
     margin-left: 5px;
     margin-right: 5px;
 }
+
 .owl-carousel-slider-top .owl-nav {
     position: absolute;
     top: 50%;
@@ -19205,30 +19207,35 @@ textarea.border,
     left: 0;
     right: 0;
 }
+
 .owl-carousel-slider-top .owl-item img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     max-width: initial;
 }
+
 .item-slider-top {
     height: 365pt;
 }
 
-::-webkit-scrollbar-track
-{
-    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
-    background-color: #F5F5F5;
+.owl-carousel-slider-top .owl-nav button {
+    color: #fff;
+    background: transparent;
+    border: 1px solid #fff;
+    border-radius: 50px;
+    font-size: 26px;
+    width: 3rem;
+    height: 3rem;
 }
 
-::-webkit-scrollbar
-{
-    width: 6px;
-    background-color: #F5F5F5;
+.owl-carousel-slider-top .owl-nav button:first-child {
+    margin-left: 10px;
 }
 
-::-webkit-scrollbar-thumb
-{
-    background-color: #000000;
+.owl-carousel-slider-top .owl-nav button:last-child {
+    float: right;
+    margin-right: 10px;
 }
+
 /*------END OWL ------*/

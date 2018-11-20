@@ -78,7 +78,7 @@ return [
     |
     */
 
-    'locale' => 'en',
+    'locale' => 'vi',
 
     /*
     |--------------------------------------------------------------------------
@@ -146,11 +146,12 @@ return [
         Illuminate\Translation\TranslationServiceProvider::class,
         Illuminate\Validation\ValidationServiceProvider::class,
         Illuminate\View\ViewServiceProvider::class,
-
+        Jenssegers\Mongodb\MongodbServiceProvider::class,
         /*
          * Package Service Providers...
          */
-        Tymon\JWTAuth\Providers\JWTAuthServiceProvider::class,
+        Barryvdh\Debugbar\ServiceProvider::class,
+        App\Providers\ClientServiceProvider::class,
         /*
          * Application Service Providers...
          */
@@ -159,8 +160,8 @@ return [
         // App\Providers\BroadcastServiceProvider::class,
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
-        App\Providers\ApiServiceProvider::class
-
+        Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider::class,
+        App\Providers\TelescopeServiceProvider::class
     ],
 
     /*
@@ -209,8 +210,8 @@ return [
         'URL' => Illuminate\Support\Facades\URL::class,
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
-        'JWTAuth' => Tymon\JWTAuth\Facades\JWTAuth::class,
-        'Client' => App\Providers\ApiServiceProvider::class,
+        'Debugbar' => Barryvdh\Debugbar\Facade::class,
+        'AppClass' => App\Facades\AppClass::class
     ],
 
 ];

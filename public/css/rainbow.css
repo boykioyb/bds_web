@@ -1,4 +1,3 @@
-
 /*------START CSS OWL-------*/
 .owl-carousel-slider-top .owl-dots {
     text-align: center;
@@ -10,6 +9,7 @@
     line-height: 0;
     bottom: 10px;
 }
+
 .owl-carousel-slider-top .owl-dot {
     border-radius: 75px;
     height: 15px;
@@ -20,6 +20,7 @@
     margin-left: 5px;
     margin-right: 5px;
 }
+
 .owl-carousel-slider-top .owl-nav {
     position: absolute;
     top: 50%;
@@ -27,30 +28,35 @@
     left: 0;
     right: 0;
 }
+
 .owl-carousel-slider-top .owl-item img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     max-width: initial;
 }
+
 .item-slider-top {
     height: 365pt;
 }
 
-::-webkit-scrollbar-track
-{
-    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
-    background-color: #F5F5F5;
+.owl-carousel-slider-top .owl-nav button {
+    color: #fff;
+    background: transparent;
+    border: 1px solid #fff;
+    border-radius: 50px;
+    font-size: 26px;
+    width: 3rem;
+    height: 3rem;
 }
 
-::-webkit-scrollbar
-{
-    width: 6px;
-    background-color: #F5F5F5;
+.owl-carousel-slider-top .owl-nav button:first-child {
+    margin-left: 10px;
 }
 
-::-webkit-scrollbar-thumb
-{
-    background-color: #000000;
+.owl-carousel-slider-top .owl-nav button:last-child {
+    float: right;
+    margin-right: 10px;
 }
+
 /*------END OWL ------*/

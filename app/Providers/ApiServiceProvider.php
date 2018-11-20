@@ -24,10 +24,6 @@ class ApiServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        $this->app->singleton('client',function () {
-           return new Client([
-               'base_uri' => getenv('END_POINT')
-           ]);
-        });
+
     }
 }
