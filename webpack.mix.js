@@ -10,6 +10,21 @@ const mix = require('laravel-mix');
  | file for the application as well as bundling up all the JS files.
  |
  */
+mix.combine([
+    'public/css/jquery-ui.css',
+    'public/css/fontawesome-all.min.css',
+    'public/css/font-awesome.min.css',
+    'public/css/owl.carousel.min.css',
+    'public/css/owl.theme.default.css',
+    'public/css/search.css',
+    'public/css/animate.css',
+    'public/css/magnific-popup.css',
+    'public/css/lightcase.css',
+    'public/css/bootstrap.css',
+    'public/css/styles.css',
+    'public/css/rainbow.css',
+], 'public/css/all.css','public/css');
+
 
 mix.combine([
     'public/js/jquery.min.js',
@@ -36,5 +51,6 @@ mix.combine([
     'public/js/forms-2.js',
     'public/js/color-switcher.js',
     'public/js/owl.carousel.js',
+    'public/js/script.js'
 ], 'public/js/all.js', 'public/js');
 

@@ -7,25 +7,13 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="description" content="html 5 template">
     <meta name="author" content="">
-    <title>Find Houses - HTML5 Template</title>
+    <title>@yield('page_title','Bất Động Sản')</title>
     <!-- FAVICON -->
     <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
-    <link rel="stylesheet" href="{{ asset('css/jquery-ui.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/all.css') }}">
     <!-- GOOGLE FONTS -->
     <link href="https://fonts.googleapis.com/css?family=Lato:300,300i,400,400i%7CMontserrat:600,800" rel="stylesheet">
     <!-- FONT AWESOME -->
-    <link rel="stylesheet" href="{{ asset('css/fontawesome-all.min.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/font-awesome.min.css') }}">
-    <!-- Slider owl CSS Files -->
-    <link rel="stylesheet" href="{{ asset('css/owl.carousel.min.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/owl.theme.default.css') }}">
-    <!-- ARCHIVES CSS -->
-    <link rel="stylesheet" href="{{ asset('css/search.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/animate.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/magnific-popup.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/lightcase.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/bootstrap.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/styles.css') }}">
     <link rel="stylesheet" id="color" href="{{asset('css/default.css')}}">
     @yield('css')
 </head>
@@ -33,6 +21,10 @@
 <body>
 <!-- START SECTION HEADINGS -->
 @include('layouts.header')
+
+<!-- start owl slider -->
+@include('layouts.slider')
+<!-- end owl slider -->
 
 <!-- STAR HEADER SEARCH -->
 @include('layouts.header_search')
@@ -42,8 +34,8 @@
 <section class="recently portfolio">
     <div class="container-fluid">
         <div class="section-title">
-            <h3>Recently</h3>
-            <h2>Properties</h2>
+            <h3>Nổi bật</h3>
+            <h2>Căn Hộ</h2>
         </div>
         <div class="row portfolio-items">
             <div class="item col-lg-3 col-md-6 col-xs-12 landscapes">
@@ -1738,10 +1730,9 @@
 </div>
 
 <!-- ARCHIVES JS -->
-<script src="{{ asset('js/all.js') }}"></script>
+<script src="{{ asset('js/all.js') }}" ></script>
 
 <!-- MAIN JS -->
-<script src="{{ asset('js/script.js') }}"></script>
 
 </body>
 

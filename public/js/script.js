@@ -167,7 +167,24 @@ jQuery(document).on('ready', function ($) {
 			}
 		}
 	});
+    $('.owl-carousel-slider-top').owlCarousel({
+        items:1,
+        loop: true,
+        itemsDesktop:[1000,1],
+        itemsDesktopSmall:[979,1],
+        itemsTablet:[768,1],
+        pagination: false,
+        navigation:true,
+        nav: true,
+        navText: [
+            "<i class='fa fa-caret-left'></i>",
+            "<i class='fa fa-caret-right'></i>"
+        ],
+        navigationText:["",""],
+        slideSpeed:1000,
+        autoPlay:true
 
+    });
 	/*----------------------------------
 	//------ TOP LOCATION ------//
 	-----------------------------------*/
