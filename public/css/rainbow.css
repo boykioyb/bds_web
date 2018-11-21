@@ -41,15 +41,21 @@
 }
 
 .owl-carousel-slider-top .owl-nav button {
-    color: #fff;
-    background: transparent;
-    border: 1px solid #fff;
-    border-radius: 50px;
-    font-size: 26px;
-    width: 3rem;
-    height: 3rem;
+    color: #fff !important;
+    background: transparent !important;
+    border: 1px solid #fff !important;
+    border-radius: 50px !important;
+    font-size: 26px !important;
+    width: 3rem !important;
+    height: 3rem !important;
+    opacity: 0.4;
 }
-
+.owl-carousel-slider-top .owl-nav button:hover{
+    opacity: 1;
+}
+.owl-carousel-slider-top .owl-nav button:focus{
+    outline: none;
+}
 .owl-carousel-slider-top .owl-nav button:first-child {
     margin-left: 10px;
 }

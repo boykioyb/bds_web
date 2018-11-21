@@ -14,8 +14,8 @@ mix.combine([
     'public/css/jquery-ui.css',
     'public/css/fontawesome-all.min.css',
     'public/css/font-awesome.min.css',
-    'public/css/owl.carousel.min.css',
-    'public/css/owl.theme.default.css',
+    'public/css/owl/owl.carousel.css',
+    'public/css/owl/owl.theme.default.css',
     'public/css/search.css',
     'public/css/animate.css',
     'public/css/magnific-popup.css',
@@ -37,11 +37,11 @@ mix.combine([
     'public/js/jquery.waypoints.min.js',
     'public/js/jquery.counterup.min.js',
     'public/js/imagesloaded.pkgd.min.js',
+    'public/js/isotope.pkgd.min.js',
     'public/js/smooth-scroll.min.js',
     'public/js/lightcase.js',
-    'public/js/isotope.pkgd.min.js',
     'public/js/search.js',
-    'public/js/owl.carousel.min.js',
+    'public/js/owl.carousel.js',
     'public/js/jquery.magnific-popup.min.js',
     'public/js/ajaxchimp.min.js',
     'public/js/newsletter.js',
@@ -50,7 +50,6 @@ mix.combine([
     'public/js/searched.js',
     'public/js/forms-2.js',
     'public/js/color-switcher.js',
-    'public/js/owl.carousel.js',
     'public/js/script.js'
 ], 'public/js/all.js', 'public/js');
 

@@ -177,8 +177,8 @@ jQuery(document).on('ready', function ($) {
         navigation:true,
         nav: true,
         navText: [
-            "<i class='fa fa-caret-left'></i>",
-            "<i class='fa fa-caret-right'></i>"
+            "<i class='fa fa-angle-left'></i>",
+            "<i class='fa fa-angle-right'></i>"
         ],
         navigationText:["",""],
         slideSpeed:1000,
