@@ -3,20 +3,20 @@
         <div class="container">
             <div class="top-info hidden-sm-down">
                 <div class="call-header">
-                    <p><i class="fa fa-phone" aria-hidden="true"></i> (234) 0200 17813</p>
+                    <p><i class="fa fa-phone" aria-hidden="true"></i> (84) 979 008 320</p>
                 </div>
                 <div class="address-header">
-                    <p><i class="fa fa-map-marker" aria-hidden="true"></i> 95 South Park Ave, USA</p>
+                    <p><i class="fa fa-map-marker" aria-hidden="true"></i>Phú Diễn, Hà Nội </p>
                 </div>
                 <div class="mail-header">
-                    <p><i class="fa fa-envelope" aria-hidden="true"></i> info@findhouses.com</p>
+                    <p><i class="fa fa-envelope" aria-hidden="true"></i> boykioyb96@gmail.com</p>
                 </div>
             </div>
             <div class="top-social hidden-sm-down">
                 <div class="login-wrap">
                     <ul class="d-flex">
-                        <li><a href="login.html"><i class="fa fa-user"></i> Login</a></li>
-                        <li><a href="register.html"><i class="fa fa-sign-in"></i> Register</a></li>
+                        <li><a href="login.html"><i class="fa fa-user"></i> @lang('message.login')</a></li>
+                        <li><a href="register.html"><i class="fa fa-sign-in"></i> @lang('message.register')</a></li>
                     </ul>
                 </div>
                 <div class="social-icons-header">
@@ -29,12 +29,23 @@
                 <div class="dropdown">
                     <button class="btn-dropdown dropdown-toggle" type="button" id="dropdownlang" data-toggle="dropdown"
                             aria-haspopup="true">
-                        <img src="images/en.png" alt="lang"/> English
+                        @if (app()->getLocale() == "vi")
+                            <img src="{{ asset('images/vi.png') }}" alt="lang"/> @lang('message.vietnam')
+                        @else
+                            <img src="{{ asset('images/en.png') }}" alt="lang"/> @lang('message.english')
+                        @endif
                     </button>
                     <ul class="dropdown-menu" aria-labelledby="dropdownlang">
-                        <li><img src="images/fr.png" alt="lang"/>France</li>
-                        <li><img src="images/de.png" alt="lang"/> German</li>
-                        <li><img src="images/it.png" alt="lang"/>Italy</li>
+                        <li>
+                            <a href="/vi">
+                                <img src="{{ asset('images/vi.png') }}" alt="lang"/>@lang('message.vietnam')
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/en">
+                                <img src="{{ asset('images/en.png') }}" alt="lang"/> @lang('message.english')
+                            </a>
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -42,8 +53,8 @@
     </div>
     <div class="header-bottom heading sticky-header" id="heading">
         <div class="container">
-            <a href="index.html" class="logo">
-                <img src="images/logo.svg" alt="realhome">
+            <a href="{{ url('/') }}" class="logo">
+                <img src="{{ asset('images/logo.svg') }}" alt="realhome">
             </a>
             <button type="button" class="search-button" data-toggle="collapse" data-target="#bloq-search"
                     aria-expanded="false">

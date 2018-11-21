@@ -21,6 +21,7 @@ mix.combine([
     'public/css/magnific-popup.css',
     'public/css/lightcase.css',
     'public/css/bootstrap.css',
+    'public/css/bootstrap-select.css',
     'public/css/styles.css',
     'public/css/rainbow.css',
 ], 'public/css/all.css','public/css');
@@ -48,8 +49,10 @@ mix.combine([
     'public/js/jquery.form.js',
     'public/js/jquery.validate.min.js',
     'public/js/searched.js',
+    'public/js/bootstrap-select.min.js',
     'public/js/forms-2.js',
     'public/js/color-switcher.js',
-    'public/js/script.js'
+    'public/js/script.js',
+    'public/js/rainbow.js',
 ], 'public/js/all.js', 'public/js');
 

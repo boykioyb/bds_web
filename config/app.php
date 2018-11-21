@@ -78,8 +78,8 @@ return [
     |
     */
 
-    'locale' => 'vi',
-
+//    'locale' => 'en',
+    'locales' => ['vi' => 'Vietnamese', 'en' => 'English'],
     /*
     |--------------------------------------------------------------------------
     | Application Fallback Locale
@@ -91,7 +91,7 @@ return [
     |
     */
 
-    'fallback_locale' => 'en',
+    'fallback_locale' => 'vi',
 
     /*
     |--------------------------------------------------------------------------

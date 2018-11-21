@@ -2,6 +2,7 @@
 
 namespace App\Providers;
 
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Foundation\Support\Providers\RouteServiceProvider as ServiceProvider;
 
@@ -33,11 +34,11 @@ class RouteServiceProvider extends ServiceProvider
      *
      * @return void
      */
-    public function map()
+    public function map(Request $request)
     {
         $this->mapApiRoutes();
 
-        $this->mapWebRoutes();
+        $this->mapWebRoutes($request);
 
         //
     }
@@ -49,11 +50,20 @@ class RouteServiceProvider extends ServiceProvider
      *
      * @return void
      */
-    protected function mapWebRoutes()
+    protected function mapWebRoutes(Request $request)
     {
+        $locale = $request->segment(1);
+        $locale = strtolower($locale);
+        if (!array_key_exists($locale, config('app.locales'))) {
+            $segments = $request->segments();
+            $segments[0] = config('app.fallback_locale');
+            $locale = $segments;
+        }
+        $this->app->setLocale($locale);
         Route::middleware('web')
-             ->namespace($this->namespace)
-             ->group(base_path('routes/web.php'));
+            ->namespace($this->namespace)
+            ->prefix('{locale}')//thêm tiền tố locale cho url
+            ->group(base_path('routes/web.php'));
     }
 
     /**
@@ -66,8 +76,8 @@ class RouteServiceProvider extends ServiceProvider
     protected function mapApiRoutes()
     {
         Route::prefix('api')
-             ->middleware('api')
-             ->namespace($this->namespace)
-             ->group(base_path('routes/api.php'));
+            ->middleware('api')
+            ->namespace($this->namespace)
+            ->group(base_path('routes/api.php'));
     }
 }
