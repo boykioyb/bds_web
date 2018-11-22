@@ -150,7 +150,6 @@ return [
         /*
          * Package Service Providers...
          */
-        Barryvdh\Debugbar\ServiceProvider::class,
         App\Providers\ClientServiceProvider::class,
         /*
          * Application Service Providers...
@@ -161,7 +160,8 @@ return [
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
         Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider::class,
-        App\Providers\TelescopeServiceProvider::class
+        App\Providers\TelescopeServiceProvider::class,
+        App\Providers\ComposerServiceProvider::class
     ],
 
     /*
@@ -210,7 +210,6 @@ return [
         'URL' => Illuminate\Support\Facades\URL::class,
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
-        'Debugbar' => Barryvdh\Debugbar\Facade::class,
         'AppClass' => App\Facades\AppClass::class
     ],
 

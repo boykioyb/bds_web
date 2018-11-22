@@ -60,11 +60,7 @@
                     aria-expanded="false">
                 <i class="fa fa-search" aria-hidden="true"></i>
             </button>
-            <div class="get-quote hidden-lg-down">
-                <a href="submit-property.html">
-                    <p>Submit Property</p>
-                </a>
-            </div>
+
             <button type="button" class="button-menu hidden-lg-up" data-toggle="collapse" data-target="#main-menu"
                     aria-expanded="false">
                 <i class="fa fa-bars" aria-hidden="true"></i>
@@ -72,159 +68,51 @@
 
             <form action="#" id="bloq-search" class="collapse">
                 <div class="bloq-search">
-                    <input type="text" placeholder="search...">
-                    <input type="submit" value="Search">
+                    <input type="text" placeholder="tìm kiếm...">
+                    <input type="submit" value="@lang('menu.search')">
                 </div>
             </form>
 
             <nav id="main-menu" class="collapse">
                 <ul>
-                    <!-- STAR COLLAPSE MOBILE MENU -->
-                    <li class="hidden-lg-up">
-                        <div class="po">
-                            <a data-toggle="collapse" href="#home" aria-expanded="false">Home</a>
-                        </div>
-                        <div class="collapse" id="home">
-                            <div class="card card-block">
-                                <a class="dropdown-item" href="index.html">Home Map</a>
-                                <a class="dropdown-item" href="index-2.html">Home Image</a>
-                                <a class="dropdown-item" href="index-3.html">Home Video</a>
-                                <a class="dropdown-item" href="index-4.html">Home Slider</a>
-                                <a class="dropdown-item" href="index-5.html">Horizontal Search</a>
-                                <a class="dropdown-item" href="index-6.html">Parallax Image</a>
-                                <a class="dropdown-item" href="index-7.html">Home 3D Video</a>
-                                <a class="dropdown-item" href="index-8.html">Home Full Slider</a>
-                            </div>
-                        </div>
-                    </li>
-                    <!-- END COLLAPSE MOBILE MENU -->
-                    <li class="dropdown hidden-md-down">
-                        <a class="active dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"
-                           aria-expanded="false" href="#">Home</a>
-                        <div class="dropdown-menu">
-                            <a class="dropdown-item" href="index.html">Home Map</a>
-                            <a class="dropdown-item" href="index-2.html">Home Image</a>
-                            <a class="dropdown-item" href="index-3.html">Home Video</a>
-                            <a class="dropdown-item" href="index-4.html">Home Slider</a>
-                            <a class="dropdown-item" href="index-5.html">Horizontal Search</a>
-                            <a class="dropdown-item" href="index-6.html">Parallax Image</a>
-                            <a class="dropdown-item" href="index-7.html">Home 3D Video</a>
-                            <a class="dropdown-item" href="index-8.html">Home Full Slider</a>
-                        </div>
-                    </li>
-                    <!-- STAR COLLAPSE MOBILE MENU -->
-                    <li class="hidden-lg-up">
-                        <div class="po">
-                            <a data-toggle="collapse" href="#listing" aria-expanded="false">Properties</a>
-                        </div>
-                        <div class="collapse" id="listing">
-                            <div class="card card-block">
-                                <a class="dropdown-item" href="properties-full-list.html">Full List</a>
-                                <a class="dropdown-item" href="properties-list-right-sidebar.html">List Right
-                                    Sidebar </a>
-                                <a class="dropdown-item" href="properties-full-grid.html">Full Grid</a>
-                                <a class="dropdown-item" href="properties-grid-right-sidebar.html">Grid Right
-                                    Sidebar</a>
-                                <a class="dropdown-item" href="properties-half-map.html">Half Map</a>
-                                <a class="dropdown-item" href="properties-map.html">Listing With Map</a>
-                                <a class="dropdown-item" href="properties-details.html">Property Details</a>
-                            </div>
-                        </div>
-                    </li>
-                    <!-- END COLLAPSE MOBILE MENU -->
-                    <li class="dropdown hidden-md-down">
-                        <a class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
-                           href="#">Properties</a>
-                        <div class="dropdown-menu">
-                            <a class="dropdown-item" href="properties-full-list.html">Full List</a>
-                            <a class="dropdown-item" href="properties-list-right-sidebar.html">List Right Sidebar </a>
-                            <a class="dropdown-item" href="properties-full-grid.html">Full Grid</a>
-                            <a class="dropdown-item" href="properties-grid-right-sidebar.html">Grid Right Sidebar</a>
-                            <a class="dropdown-item" href="properties-half-map.html">Half Map</a>
-                            <a class="dropdown-item" href="properties-map.html">Listing With Map</a>
-                            <a class="dropdown-item" href="properties-details.html">Property Details</a>
-                        </div>
-                    </li>
-                    <!-- STAR COLLAPSE MOBILE MENU -->
-                    <li class="hidden-lg-up">
-                        <div class="po">
-                            <a data-toggle="collapse" href="#services" aria-expanded="false">Agents</a>
-                        </div>
-                        <div class="collapse" id="services">
-                            <div class="card card-block">
-                                <a class="dropdown-item" href="agents-listing-grid.html">Agents Listing Grid</a>
-                                <a class="dropdown-item" href="agents-listing-row.html">Agents Listing Row</a>
-                                <a class="dropdown-item" href="agent-details.html">Agent Details</a>
-                            </div>
-                        </div>
-                    </li>
-                    <!-- END COLLAPSE MOBILE MENU -->
-                    <li class="dropdown hidden-md-down">
-                        <a class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
-                           href="#">Agents</a>
-                        <div class="dropdown-menu">
-                            <a class="dropdown-item" href="agents-listing-grid.html">Agents Listing Grid</a>
-                            <a class="dropdown-item" href="agents-listing-row.html">Agents Listing Row</a>
-                            <a class="dropdown-item" href="agent-details.html">Agent Details</a>
-                        </div>
-                    </li>
-                    <!-- STAR COLLAPSE MOBILE MENU -->
-                    <li class="hidden-lg-up">
-                        <div class="po">
-                            <a data-toggle="collapse" href="#about" aria-expanded="false">Pages</a>
-                        </div>
-                        <div class="collapse" id="about">
-                            <div class="card card-block">
-                                <a class="dropdown-item" href="about.html">About Us</a>
-                                <a class="dropdown-item" href="faq.html">Faq</a>
-                                <a class="dropdown-item" href="pricing-table.html">Pricing</a>
-                                <a class="dropdown-item" href="404.html">404</a>
-                                <a class="dropdown-item" href="login.html">Login</a>
-                                <a class="dropdown-item" href="register.html">Register</a>
-                                <a class="dropdown-item" href="coming-soon.html">Coming Soon</a>
-                                <a class="dropdown-item" href="under-construction.html">Under Construction</a>
-                            </div>
-                        </div>
-                    </li>
-                    <!-- END COLLAPSE MOBILE MENU -->
-                    <li class="dropdown hidden-md-down">
-                        <a class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
-                           href="#">Pages</a>
-                        <div class="dropdown-menu">
-                            <a class="dropdown-item" href="about.html">About Us</a>
-                            <a class="dropdown-item" href="faq.html">Faq</a>
-                            <a class="dropdown-item" href="pricing-table.html">Pricing</a>
-                            <a class="dropdown-item" href="404.html">404</a>
-                            <a class="dropdown-item" href="login.html">Login</a>
-                            <a class="dropdown-item" href="register.html">Register</a>
-                            <a class="dropdown-item" href="coming-soon.html">Coming Soon</a>
-                            <a class="dropdown-item" href="under-construction.html">Under Construction</a>
-                        </div>
-                    </li>
-                    <!-- STAR COLLAPSE MOBILE MENU -->
-                    <li class="hidden-lg-up">
-                        <div class="po">
-                            <a data-toggle="collapse" href="#blog" aria-expanded="false">Blog</a>
-                        </div>
-                        <div class="collapse" id="blog">
-                            <div class="card card-block">
-                                <a class="dropdown-item" href="blog.html">Blog Default</a>
-                                <a class="dropdown-item" href="blog-rightsidebar.html">Blog Right Sidebar</a>
-                                <a class="dropdown-item" href="blog-details.html">Blog Details</a>
-                            </div>
-                        </div>
-                    </li>
-                    <!-- END COLLAPSE MOBILE MENU -->
-                    <li class="dropdown hidden-md-down">
-                        <a class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
-                           href="#">Blog</a>
-                        <div class="dropdown-menu">
-                            <a class="dropdown-item" href="blog.html">Blog Default</a>
-                            <a class="dropdown-item" href="blog-rightsidebar.html">Blog Right Sidebar</a>
-                            <a class="dropdown-item" href="blog-details.html">Blog Details</a>
-                        </div>
-                    </li>
-                    <li><a href="contact-us.html">Contact</a></li>
+                @if (!empty($menus))
+                    @foreach($menus as $val)
+                        <!-- STAR COLLAPSE MOBILE MENU -->
+                            <li class="hidden-lg-up">
+                                @if (!empty($menus['child']))
+                                    <div class="po">
+                                        <a data-toggle="collapse" href="#{{ $val['route'] }}"
+                                           aria-expanded="false">@lang($val['name'])</a>
+                                    </div>
+                                    <div class="collapse" id="{{ $val['route'] }}">
+                                        <div class="card card-block">
+                                            @foreach($menus['child'] as $child)
+                                                <a class="dropdown-item"
+                                                   href="{{ route($val['route'],app()->getLocale()) }}">@lang($child['name'])</a>
+                                            @endforeach
+                                        </div>
+                                    </div>
+                                @else
+                                    <a href="{{ route($val['route'],app()->getLocale()) }}">@lang($val['name'])</a>
+                                @endif
+                            </li>
+                            <!-- END COLLAPSE MOBILE MENU -->
+                            <li class="dropdown hidden-md-down">
+                                @if (!empty($menus['child']))
+                                    <a class="active dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"
+                                       aria-expanded="false" href="#">@lang($val['name'])</a>
+                                    <div class="dropdown-menu">
+                                        @foreach($menus['child'] as $child)
+                                            <a class="dropdown-item"
+                                               href="{{ route($val['route'],app()->getLocale()) }}">@lang($child['name'])</a>
+                                        @endforeach
+                                    </div>
+                                @else
+                                    <a href="{{ route($val['route'],app()->getLocale()) }}">@lang($val['name'])</a>
+                                @endif
+                            </li>
+                        @endforeach
+                    @endif
                 </ul>
             </nav>
         </div>

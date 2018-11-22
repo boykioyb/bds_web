@@ -1,5 +1,5 @@
 <?php
-define('BASE_URL_IMG','http://bds_cms.test:8080/uploads/');
+define('BASE_URL_IMG', 'http://bds_cms.test/uploads/');
 define('STATUS_INACTIVE', 0);
 define('STATUS_ACTIVE', 1);
 define('STATUS_DELELE', 0);
@@ -29,6 +29,12 @@ define('NUMBERS', [
     5 => 5
 ]);
 
+
+define('MODE_PROPERTIES', [
+    'sale' => 'sale',
+    'hot' => 'hot',
+    'expire' => 'expire'
+]);
 
 define('CODE_SLIDER', [
     'BANNER_TOP' => 'Banner trên',

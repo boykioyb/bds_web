@@ -6,95 +6,97 @@
                     <div class="hero-inner">
                         <!-- Welcome Text -->
                         <div class="welcome-text">
-                            <h1>Find Your Dream Home</h1>
-                            <p>We have over million properties for you</p>
+                            <h1>@lang('message.title_search')</h1>
+                            <p>@lang('message.sub_title_search')</p>
                         </div>
                         <!--/ End Welcome Text -->
                         <!-- Search Form -->
                         <div class="trip-search">
                             <form class="form">
-                                <!-- Form Location -->
-                                <div class="form-group location">
-                                    <div class="nice-select form-control wide" tabindex="0"><span class="current"><i
-                                                class="fa fa-map-marker"></i>Location</span>
-                                        <ul class="list">
-                                            <li data-value="1" class="option selected ">New York</li>
-                                            <li data-value="2" class="option">Los Angeles</li>
-                                            <li data-value="3" class="option">Chicago</li>
-                                            <li data-value="3" class="option">Philadelphia</li>
-                                            <li data-value="3" class="option">San Francisco</li>
-                                            <li data-value="3" class="option">Miami</li>
-                                            <li data-value="3" class="option">Houston</li>
-                                        </ul>
+                                <div class="row">
+                                    <div class="col-lg-3 col-md-6">
+                                        <div class="at-col-default-mar">
+                                            <select class="form-control">
+                                                <option value="0" selected>@lang('message.city')</option>
+                                                <option value="1">New York</option>
+                                                <option value="2">Los Angeles</option>
+                                                <option value="3">Chicago</option>
+                                                <option value="4">Philadelphia</option>
+                                                <option value="5">San Francisco</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-3 col-md-6">
+                                        <div class="at-col-default-mar">
+                                            <select class="div-toggle form-control" data-target=".my-info-1">
+                                                <option value="0" data-show=".acitveon"
+                                                        selected>@lang('message.project')</option>
+                                                <option value="1" data-show=".sale">For Sale</option>
+                                                <option value="2" data-show=".rent">For Rent</option>
+                                                <option value="3" data-show=".rent">Sold</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-3 col-md-6">
+                                        <div class="at-col-default-mar">
+                                            <div class="at-col-default-mar">
+                                                <select class="form-control">
+                                                    <option value="0" selected>@lang('message.mode')</option>
+                                                    @foreach(MODE_PROPERTIES as $k => $val)
+                                                        <option value="{{ $k }}">@lang('message.'.$val)</option>
+                                                    @endforeach
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-3 col-md-6">
+                                        <div class="at-col-default-mar">
+                                            <select class="div-toggle form-control" data-target=".my-info-1">
+                                                <option value="0" selected>@lang('message.beds')</option>
+                                                <option value="1">1</option>
+                                                <option value="2">2</option>
+                                                <option value="3">3</option>
+                                                <option value="4">4</option>
+                                                <option value="5">5</option>
+                                                <option value="6">6</option>
+                                                <option value="7">7</option>
+                                                <option value="8">8</option>
+                                                <option value="9">9</option>
+                                                <option value="10">10</option>
+                                            </select>
+                                        </div>
                                     </div>
                                 </div>
-                                <!--/ End Form Location -->
-                                <!-- Form Property Type -->
-                                <div class="form-group">
-                                    <div class="nice-select form-control wide" tabindex="0"><span class="current"><i
-                                                class="fa fa-home"></i>Property Type</span>
-                                        <ul class="list">
-                                            <li data-value="1" class="option selected ">Family House</li>
-                                            <li data-value="2" class="option">Apartment</li>
-                                            <li data-value="3" class="option">Condo</li>
-                                        </ul>
+                                <div class="row">
+                                    <div class="col-lg-3 col-md-6">
+                                        <div class="at-col-default-mar no-mb">
+                                            <select name="price" class="form-control search-price">
+                                                <option value="" selected>Chọn khoảng giá</option>
+                                                <option value="0-1.5">Dưới 1,5 tỷ</option>
+                                                <option value="1.5-2.5">Từ 1,5 - 2,5 tỷ</option>
+                                                <option value="2.5-3.5">Từ 2,5 - 3,5 tỷ</option>
+                                                <option value="3.5-5">Từ 3,5 - 5 tỷ</option>
+                                                <option value="5-7">Từ 5 - 7 tỷ</option>
+                                                <option value="7-10">Từ 7 - 10 tỷ</option>
+                                                <option value="10">Trên 10 tỷ</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-3 col-md-6">
+                                        <div class="at-col-default-mar no-mb">
+                                            <input type="text" readonly="readonly" name="square" class="slider_amount m-t-lg-30 m-t-xs-0 m-t-sm-10">
+                                            <div class="slider-range"></div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-lg-3 col-md-6">
+                                        <div class="at-col-default-mar no-mb">
+                                            <button class="btn btn-primary btn-block hvr-bounce-to-right" type="submit">
+                                                Search
+                                            </button>
+                                        </div>
                                     </div>
                                 </div>
-                                <!--/ End Form Property Type -->
-                                <!-- Form Property Status -->
-                                <div class="form-group duration">
-                                    <div class="nice-select form-control wide" tabindex="0"><span class="current"><i
-                                                class="fa fa-home"></i>Property Status</span>
-                                        <ul class="list">
-                                            <li data-value="1" class="option selected ">For Sale</li>
-                                            <li data-value="2" class="option">For Rent</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <!--/ End Form Property Status -->
-                                <!-- Form Bedrooms -->
-                                <div class="form-group">
-                                    <div class="nice-select form-control wide" tabindex="0"><span class="current"><i
-                                                class="fa fa-bed" aria-hidden="true"></i>Any Bedrooms</span>
-                                        <ul class="list">
-                                            <li data-value="1" class="option selected">1</li>
-                                            <li data-value="2" class="option">2</li>
-                                            <li data-value="3" class="option">3</li>
-                                            <li data-value="3" class="option">4</li>
-                                            <li data-value="3" class="option">5</li>
-                                            <li data-value="3" class="option">6</li>
-                                            <li data-value="3" class="option">7</li>
-                                            <li data-value="3" class="option">8</li>
-                                            <li data-value="3" class="option">9</li>
-                                            <li data-value="3" class="option">10</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <!--/ End Form Bedrooms -->
-                                <!-- Form Bathrooms -->
-                                <div class="form-group">
-                                    <div class="nice-select form-control wide" tabindex="0"><span class="current"><i
-                                                class="fa fa-bath" aria-hidden="true"></i>Any Bathrooms</span>
-                                        <ul class="list">
-                                            <li data-value="1" class="option selected">1</li>
-                                            <li data-value="2" class="option">2</li>
-                                            <li data-value="3" class="option">3</li>
-                                            <li data-value="3" class="option">4</li>
-                                            <li data-value="3" class="option">5</li>
-                                            <li data-value="3" class="option">6</li>
-                                            <li data-value="3" class="option">7</li>
-                                            <li data-value="3" class="option">8</li>
-                                            <li data-value="3" class="option">9</li>
-                                            <li data-value="3" class="option">10</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <!--/ End Form Bathrooms -->
-                                <!-- Form Button -->
-                                <div class="form-group button">
-                                    <button type="submit" class="btn">Search</button>
-                                </div>
-                                <!--/ End Form Button -->
                             </form>
                         </div>
                         <!--/ End Search Form -->
