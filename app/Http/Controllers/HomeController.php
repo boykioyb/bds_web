@@ -2,27 +2,30 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Slider;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
 {
+    private $request;
+
     /**
-     * Create a new controller instance.
-     *
-     * @return void
+     * HomeController constructor.
+     * @param Request $request
      */
-    public function __construct()
+    public function __construct(Request $request)
     {
-        $this->middleware('auth');
+        $this->request = $request;
     }
 
     /**
      * Show the application dashboard.
-     *
+     * @param $locale
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index($locale = null)
     {
-        return view('home');
+        $slider = Slider::where(['code'=> 'BANNER_TOP'])->first();
+        return view('home.index', compact('slider'));
     }
 }

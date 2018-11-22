@@ -2,7 +2,7 @@
 @section('content')
 
     <!-- start owl slider -->
-    @include('layouts.slider')
+    @include('layouts.slider',['slider' => !empty($slider) ? $slider : null])
     <!-- end owl slider -->
 
     <!-- STAR HEADER SEARCH -->

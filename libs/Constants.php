@@ -1,5 +1,5 @@
 <?php
-
+define('BASE_URL_IMG','http://bds_cms.test:8080/uploads/');
 define('STATUS_INACTIVE', 0);
 define('STATUS_ACTIVE', 1);
 define('STATUS_DELELE', 0);
