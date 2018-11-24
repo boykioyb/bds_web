@@ -13,5 +13,7 @@ return [
     'hot' => 'Hot',
     'sale' => 'Giảm giá',
     'expire' => 'Sắp hết hạn',
-    'beds' => 'Phòng ngủ'
+    'beds' => 'Phòng ngủ',
+    'search' => 'Tìm kiếm',
+    'search.acreage' => 'Chọn diện tích'
 ];

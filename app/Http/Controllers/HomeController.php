@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Helpers\Helper;
+use App\Models\Property;
 use App\Models\Slider;
 use Illuminate\Http\Request;
 
@@ -25,7 +27,17 @@ class HomeController extends Controller
      */
     public function index($locale = null)
     {
-        $slider = Slider::where(['code'=> 'BANNER_TOP'])->first();
-        return view('home.index', compact('slider'));
+
+        $slider = Slider::where('code', 'BANNER_TOP')->first();
+
+        $apartment_hot = Property::where(['status' => STATUS_ACTIVE])
+                        ->orderBy('priority', 'DESC')
+                        ->orderBy('weight', 'ASC')
+                        ->orderBy('created_at', 'DESC')
+                        ->limit(5)
+                        ->get();
+
+
+        return view('home.index', compact('slider','apartment_hot'));
     }
 }

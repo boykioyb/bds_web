@@ -84,15 +84,23 @@
                                     </div>
                                     <div class="col-lg-3 col-md-6">
                                         <div class="at-col-default-mar no-mb">
-                                            <input type="text" readonly="readonly" name="square" class="slider_amount m-t-lg-30 m-t-xs-0 m-t-sm-10">
-                                            <div class="slider-range"></div>
+                                            <select name="acreage" class="form-control search-price">
+                                                <option value="" selected>Chọn diện tích </option>
+                                                <option value="0-30">Dưới 30m<sup>2</sup></option>
+                                                <option value="30-50">30 - 50 m<sup>2</sup></option>
+                                                <option value="50-80">50 - 80 m<sup>2</sup></option>
+                                                <option value="80-100">80 - 100 m<sup>2</sup></option>
+                                                <option value="100-150">100 - 150 m<sup>2</sup></option>
+                                                <option value="150-200">150 - 200 m<sup>2</sup></option>
+                                                <option value="200">Trên 200 m<sup>2</sup></option>
+                                            </select>
                                         </div>
                                     </div>
 
                                     <div class="col-lg-3 col-md-6">
                                         <div class="at-col-default-mar no-mb">
                                             <button class="btn btn-primary btn-block hvr-bounce-to-right" type="submit">
-                                                Search
+                                                <i class="fa fa-search"></i> @lang('message.search')
                                             </button>
                                         </div>
                                     </div>

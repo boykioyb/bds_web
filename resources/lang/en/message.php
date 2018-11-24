@@ -13,5 +13,6 @@ return [
     'hot' => 'Hot',
     'sale' => 'Sale',
     'expire' => 'About to expire',
-    'beds' => 'Beds'
+    'beds' => 'Beds',
+    'search' => 'Search'
 ];

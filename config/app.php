@@ -161,7 +161,8 @@ return [
         App\Providers\RouteServiceProvider::class,
         Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider::class,
         App\Providers\TelescopeServiceProvider::class,
-        App\Providers\ComposerServiceProvider::class
+        App\Providers\ComposerServiceProvider::class,
+        App\Providers\HelperServiceProvider::class
     ],
 
     /*
@@ -210,7 +211,7 @@ return [
         'URL' => Illuminate\Support\Facades\URL::class,
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
-        'AppClass' => App\Facades\AppClass::class
+        'Helper' => App\Facades\Helper::class
     ],
 
 ];
