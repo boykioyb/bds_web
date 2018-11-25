@@ -14,6 +14,12 @@ return [
     'sale' => 'Giảm giá',
     'expire' => 'Sắp hết hạn',
     'beds' => 'Phòng ngủ',
+    'baths' => 'Phòng tắm',
+    'acreage' => 'm2',
+    'garages' => 'Gara',
     'search' => 'Tìm kiếm',
-    'search.acreage' => 'Chọn diện tích'
+    'search.acreage' => 'Chọn diện tích',
+    'month' => ' tháng',
+    'day' => ' ngày',
+    'view_property' => 'Xem chi tiết'
 ];

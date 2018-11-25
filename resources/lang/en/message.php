@@ -13,6 +13,13 @@ return [
     'hot' => 'Hot',
     'sale' => 'Sale',
     'expire' => 'About to expire',
-    'beds' => 'Beds',
-    'search' => 'Search'
+    'beds' => 'Bedrooms',
+    'baths' => 'Bathrooms',
+    'acreage' => 'sq ft',
+    'garages' => 'Garages',
+    'search' => 'Search',
+    'month' => ' months ago',
+    'day' => ' day',
+    'view_property' => 'View Property'
+
 ];

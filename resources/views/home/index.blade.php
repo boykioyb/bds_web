@@ -10,7 +10,7 @@
     <!-- END HEADER SEARCH -->
 
     <!-- START SECTION RECENTLY PROPERTIES -->
-    @if(!empty($apartment_hot))
+    @if(!empty($apartmentHot))
         <section class="recently portfolio">
             <div class="container-fluid">
                 <div class="section-title">
@@ -18,65 +18,88 @@
                     <h2>Căn Hộ</h2>
                 </div>
                 <div class="row portfolio-items">
-                    @foreach($apartment_hot as $k => $apartment)
+                    @foreach($apartmentHot as $k => $apartment)
                         <div class="item col-lg-3 col-md-6 col-xs-12 landscapes">
                             <div class="project-single">
                                 <div class="project-inner project-head">
                                     <div class="project-bottom">
-                                        <h4><a href="properties-details.html">View Property</a><span
-                                                class="category">Real Estate</span></h4>
+                                        <h4><a href="properties-details.html">{{ $apartment->name }}</a>
+                                            {{--<span--}}
+                                                {{--class="category">Real Estate</span>--}}
+                                        </h4>
                                     </div>
                                     <div class="button-effect">
                                         <a href="properties-details.html" class="btn"><i class="fa fa-link"></i></a>
                                         <a href="https://www.youtube.com/watch?v=2xHQqYRcrx4"
                                            class="btn popup-video popup-youtube"><i
                                                 class="fas fa-video"></i></a>
-                                        <a class="img-poppu btn" href="images/feature-properties/fp-1.jpg"
-                                           data-rel="lightcase:myCollection:slideshow"><i class="fa fa-photo"></i></a>
+
+                                        @if(!empty($apartment->files))
+                                            @foreach($apartment->files  as $k => $image)
+                                                @if ($k == 0)
+                                                    <a class="img-poppu btn" href="{{ BASE_URL_IMG.$image }}"
+                                                       data-rel="lightcase:myCollection:{{ $apartment->_id }}"
+                                                       alt="This is the default caption text"
+                                                    >
+                                                        <i class="fa fa-photo"></i>
+                                                    </a>
+                                                @else
+                                                    <a style="display: none;" class="img-poppu btn"
+                                                       href="{{ BASE_URL_IMG.$image }}"
+                                                       data-rel="lightcase:myCollection:{{ $apartment->_id }}"
+                                                       alt="This is the default caption text"
+                                                    ></a>
+                                                @endif
+
+
+                                            @endforeach
+                                        @endif
                                     </div>
                                     <div class="homes">
                                         <!-- homes img -->
                                         <a href="properties-details.html" class="homes-img">
                                             <div class="homes-tag button alt featured">Featured</div>
                                             <div class="homes-tag button alt sale">HOT</div>
-                                            <div class="homes-price">Family Home</div>
-                                            <img src="images/feature-properties/fp-1.jpg" alt="home-1"
-                                                 class="img-responsive">
+                                            <div class="homes-price"></div>
+                                            <img
+                                                src="{{!empty($apartment->files) ? BASE_URL_IMG.$apartment->files[0] : "images/feature-properties/fp-1.jpg" }}"
+                                                alt="{{ $apartment->name }}"
+                                                class="img-responsive">
                                         </a>
                                     </div>
                                 </div>
                                 <!-- homes content -->
                                 <div class="homes-content">
                                     <!-- homes address -->
-                                    <h3>Real House Luxury Villa</h3>
+                                    <h3>{{ $apartment->name }}</h3>
                                     <p class="homes-address mb-3">
                                         <a href="properties-details.html">
-                                            <i class="fa fa-map-marker"></i><span>Est St, 77 - Central Park South, NYC</span>
+                                            <i class="fa fa-map-marker"></i><span>{{ $allProjectSale[$apartment->project_sales]['address'] }}</span>
                                         </a>
                                     </p>
                                     <!-- homes List -->
                                     <ul class="homes-list clearfix">
                                         <li>
                                             <i class="fa fa-bed" aria-hidden="true"></i>
-                                            <span>6 Bedrooms</span>
+                                            <span>{{ $apartment->beds }} @lang('message.beds')</span>
                                         </li>
                                         <li>
                                             <i class="fa fa-bath" aria-hidden="true"></i>
-                                            <span>3 Bathrooms</span>
+                                            <span>{{ $apartment->baths }} @lang('message.baths')</span>
                                         </li>
                                         <li>
                                             <i class="fa fa-object-group" aria-hidden="true"></i>
-                                            <span>720 sq ft</span>
+                                            <span>{{ $apartment->acreage }} @lang('message.acreage')</span>
                                         </li>
                                         <li>
                                             <i class="fas fa-warehouse" aria-hidden="true"></i>
-                                            <span>2 Garages</span>
+                                            <span>{{ $apartment->garages }} @lang('message.garages')</span>
                                         </li>
                                     </ul>
                                     <!-- Price -->
                                     <div class="price-properties">
                                         <h3 class="title mt-3">
-                                            <a href="properties-details.html">$ 230,000</a>
+                                            <a href="properties-details.html">{{ \Helper::formatMoney($apartment->price) }}</a>
                                         </h3>
                                         <div class="compare">
                                             <a href="#" title="Compare">
@@ -92,11 +115,11 @@
                                     </div>
                                     <div class="footer">
                                         <a href="agent-details.html">
-                                            <i class="fa fa-user"></i> Jhon Doe
+                                            <i class="fa fa-user"></i> Quang Hòa
                                         </a>
                                         <span>
-                                <i class="fa fa-calendar"></i> 2 months ago
-                            </span>
+                                            <i class="fa fa-calendar"></i> {{ \Helper::calcDate($apartment->start_date,$apartment->end_date) }}
+                                        </span>
                                     </div>
                                 </div>
                             </div>
