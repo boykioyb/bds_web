@@ -13,7 +13,7 @@ class Property extends BaseModel
     public static function SCHEMAS()
     {
         return [
-            'project_sales' => ['type' => ObjectId::class, 'default' =>null],
+            'project_sales' => ['type' => ObjectId::class, 'default' => null],
             'lang_code' => ['type' => 'string', 'default' => null],
             'name' => ['type' => 'string', 'default' => null],
             'name_ascii' => ['type' => 'string', 'default' => null],
