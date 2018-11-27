@@ -24,8 +24,10 @@
                                 <div class="project-inner project-head">
                                     <div class="project-bottom">
                                         <h4><a href="properties-details.html">{{ $apartment->name }}</a>
-                                            {{--<span--}}
-                                                {{--class="category">Real Estate</span>--}}
+                                            <span
+                                                class="category">{{ !empty($allCategories[$apartment->categories->__toString()]) ?
+                                                 $allCategories[$apartment->categories->__toString()]['name']
+                                                 : '' }}</span>
                                         </h4>
                                     </div>
                                     <div class="button-effect">
@@ -58,9 +60,8 @@
                                     <div class="homes">
                                         <!-- homes img -->
                                         <a href="properties-details.html" class="homes-img">
-                                            <div class="homes-tag button alt featured">Featured</div>
                                             <div class="homes-tag button alt sale">HOT</div>
-                                            <div class="homes-price"></div>
+                                            {{--<div class="homes-price text-danger">{{ \Helper::formatMoney($apartment->price) }}</div>--}}
                                             <img
                                                 src="{{!empty($apartment->files) ? BASE_URL_IMG.$apartment->files[0] : "images/feature-properties/fp-1.jpg" }}"
                                                 alt="{{ $apartment->name }}"
@@ -74,7 +75,7 @@
                                     <h3>{{ $apartment->name }}</h3>
                                     <p class="homes-address mb-3">
                                         <a href="properties-details.html">
-                                            <i class="fa fa-map-marker"></i><span>{{ $allProjectSale[$apartment->project_sales]['address'] }}</span>
+                                            <i class="fa fa-map-marker"></i><span>{{ $allProjectSale[$apartment->project_sales->__toString()]['address'] }}</span>
                                         </a>
                                     </p>
                                     <!-- homes List -->

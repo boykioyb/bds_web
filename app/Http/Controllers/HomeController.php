@@ -31,11 +31,11 @@ class HomeController extends Controller
         $slider = Slider::where('code', 'BANNER_TOP')->first();
 
         $apartmentHot = Property::where(['status' => STATUS_ACTIVE])
-                        ->orderBy('priority', 'DESC')
-                        ->orderBy('weight', 'ASC')
-                        ->orderBy('created_at', 'DESC')
-                        ->limit(5)
-                        ->get();
+            ->orderBy('priority', 'DESC')
+            ->orderBy('weight', 'ASC')
+            ->orderBy('created_at', 'DESC')
+            ->limit(5)
+            ->get();
 
 //        foreach ($apartmentHot as $value){
 //            $value->start_date = Carbon::parse($value->start_date)->format('d-m-Y');
@@ -43,6 +43,7 @@ class HomeController extends Controller
 //        }
 
         $allProjectSale = \Helper::getAllProjectSale();
-        return view('home.index', compact('slider','apartmentHot','allProjectSale'));
+        $allCategories = \Helper::getAllCategories();
+        return view('home.index', compact('slider', 'apartmentHot', 'allProjectSale','allCategories'));
     }
 }

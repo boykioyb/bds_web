@@ -3,6 +3,7 @@
 
 namespace App\Helpers;
 
+use App\Models\Category;
 use App\Models\ProjectSale;
 use Carbon\Carbon;
 use Illuminate\Support\Facades\DB;
@@ -51,6 +52,26 @@ class Helper
         return $result;
     }
 
+    public function getAllCategories(){
+        $all = Category::where('status', STATUS_ACTIVE)->get();
+        if (empty($all)) {
+            return null;
+        }
+        $result = array();
+        foreach ($all as $cate) {
+            $result[$cate->_id]['lang_code'] = $cate->lang_code;
+            $result[$cate->_id]['code'] = $cate->code;
+            $result[$cate->_id]['name'] = $cate->name;
+            $result[$cate->_id]['name_ascii'] = $cate->name_ascii;
+            $result[$cate->_id]['url_alias'] = $cate->url_alias;
+            $result[$cate->_id]['description'] = $cate->description;
+            $result[$cate->_id]['status'] = $cate->status;
+            $result[$cate->_id]['weight'] = $cate->weight;
+            $result[$cate->_id]['created_at'] = Carbon::parse($cate->created_at)->format('d-m-Y');
+        }
+        return $result;
+    }
+
     /**
      * @param null $money
      * @return string
@@ -69,14 +90,16 @@ class Helper
 
     public final function calcDate(string $date1, string $date2): string
     {
+
         if (empty($date1)) {
             return null;
         }
         if (empty($date2)) {
-            $date2 = date('d-m-Y');
+            $date2 = date('Y-m-d');
         }
         $ts1 = strtotime($date1);
         $ts2 = strtotime($date2);
+
         $year1 = date('Y', $ts1);
         $year2 = date('Y', $ts2);
 
@@ -87,7 +110,8 @@ class Helper
         $day2 = date('d', $ts2);
 
         $diff = (($year2 - $year1) * 12) + ($month2 - $month1);
-        if ($diff == 0) {
+
+        if ($diff > 0) {
             return $diff . trans('message.month');
         } else {
             return ($day2 - $day1) . trans('message.day');
