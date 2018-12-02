@@ -28,7 +28,7 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $slider = Slider::where('code', 'BANNER_TOP')->first();
+        $slider = Slider::where('code', 'BANNER_TOP')->where('status', STATUS_ACTIVE)->first();
 
         $apartmentHot = Property::where(['status' => STATUS_ACTIVE])
             ->orderBy('priority', 'DESC')

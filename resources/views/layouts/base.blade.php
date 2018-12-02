@@ -75,6 +75,7 @@
 
 <!-- ARCHIVES JS -->
 <script src="{{ asset('js/all.js') }}" ></script>
+<script src="{{ asset('js/color-switcher.js') }}" ></script>
 
 <!-- MAIN JS -->
 

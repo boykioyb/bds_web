@@ -235,7 +235,7 @@ $(document).on('ready',function ($) {
         $("#footer img").attr("src", "images/footer-logo.jpg");
     });
     $("#dark").click(function () {
-        $("#footer").addClass("dark");
+        $("#footer").addCchoose_colorlass("dark");
         $("#footer").removeClass("light");
         $("#footer img").attr("src", "images/footer-logo-dark.jpg");
     });

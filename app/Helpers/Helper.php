@@ -80,7 +80,7 @@ class Helper
     {
         if (strlen($money) < 10) {
             $format = number_format($money, 0, ',', '.');
-            $format = round($format, 1) / 1000 . " Tỷ";
+            $format = round($format, 1) . " Triệu";
         } else {
             $format = number_format($money, 0, ',', '.');
             $format = round($format, 1) . " Tỷ";

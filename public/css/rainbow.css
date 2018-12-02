@@ -32,8 +32,8 @@
 .owl-carousel-slider-top .owl-item img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
-    max-width: initial;
+    /*object-fit: cover;*/
+    /*max-width: initial;*/
 }
 
 .item-slider-top {
@@ -66,3 +66,12 @@
 }
 
 /*------END OWL ------*/
+
+.wd-350-230{
+    width: 350px;
+    height: 230px;
+}
+.wd-350-230 img,.wd-350-230 a{
+    width: 100%;
+    height: 100%;
+}

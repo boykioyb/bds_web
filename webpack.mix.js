@@ -54,5 +54,6 @@ mix.combine([
     'public/js/color-switcher.js',
     'public/js/script.js',
     'public/js/rainbow.js',
+    'public/js/lazysizes.min.js',
 ], 'public/js/all.js', 'public/js');
 

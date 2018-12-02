@@ -13,10 +13,10 @@
     @if(!empty($apartmentHot))
         <section class="recently portfolio">
             <div class="container-fluid">
-                <div class="section-title">
-                    <h3>Nổi bật</h3>
-                    <h2>Căn Hộ</h2>
-                </div>
+                {{--<div class="section-title">--}}
+                    {{--<h3>Nổi bật</h3>--}}
+                    {{--<h2>Căn Hộ</h2>--}}
+                {{--</div>--}}
                 <div class="row portfolio-items">
                     @foreach($apartmentHot as $k => $apartment)
                         <div class="item col-lg-3 col-md-6 col-xs-12 landscapes">
@@ -57,15 +57,15 @@
                                             @endforeach
                                         @endif
                                     </div>
-                                    <div class="homes">
+                                    <div class="homes wd-350-230">
                                         <!-- homes img -->
                                         <a href="properties-details.html" class="homes-img">
                                             <div class="homes-tag button alt sale">HOT</div>
                                             {{--<div class="homes-price text-danger">{{ \Helper::formatMoney($apartment->price) }}</div>--}}
-                                            <img
-                                                src="{{!empty($apartment->files) ? BASE_URL_IMG.$apartment->files[0] : "images/feature-properties/fp-1.jpg" }}"
-                                                alt="{{ $apartment->name }}"
-                                                class="img-responsive">
+                                            <img data-src="{{!empty($apartment->avatar) ? BASE_URL_IMG.$apartment->avatar : "images/feature-properties/fp-1.jpg" }}"
+                                                 class="img-responsive lazyload"
+                                                 data-alt="{{ $apartment->name }}"
+                                            >
                                         </a>
                                     </div>
                                 </div>
@@ -100,7 +100,7 @@
                                     <!-- Price -->
                                     <div class="price-properties">
                                         <h3 class="title mt-3">
-                                            <a href="properties-details.html">{{ \Helper::formatMoney($apartment->price) }}</a>
+                                            <a href="properties-details.html"><span class="text-danger"><b>{{ \Helper::formatMoney($apartment->price) }}</span></a>
                                         </h3>
                                         <div class="compare">
                                             <a href="#" title="Compare">
@@ -109,9 +109,9 @@
                                             <a href="#" title="Share">
                                                 <i class="fas fa-share-alt"></i>
                                             </a>
-                                            <a href="#" title="Favorites">
-                                                <i class="fa fa-heart-o"></i>
-                                            </a>
+                                            {{--<a href="#" title="Favorites">--}}
+                                                {{--<i class="fa fa-heart-o"></i>--}}
+                                            {{--</a>--}}
                                         </div>
                                     </div>
                                     <div class="footer">
@@ -223,10 +223,6 @@
     <!-- START SECTION SERVICES -->
     <section class="services-home bg-white">
         <div class="container">
-            <div class="section-title">
-                <h3>Property</h3>
-                <h2>Services</h2>
-            </div>
             <div class="row">
                 <div class="col-lg-4 col-md-12 m-top-0 m-bottom-40">
                     <div class="service bg-light-2 border-1 border-light box-shadow-1 box-shadow-2-hover">
@@ -234,7 +230,7 @@
                             <i class="fa fa-home bg-base text-white rounded-100 box-shadow-1 p-top-5 p-bottom-5 p-right-5 p-left-5"></i>
                         </div>
                         <div class="agent-section p-top-35 p-bottom-30 p-right-25 p-left-25">
-                            <h4 class="m-bottom-15 text-bold-700">Houses</h4>
+                            <h4 class="m-bottom-15 text-bold-700">Tiết kiệm thời gian</h4>
                             <p>Nonec pede justo fringilla vel aliquet nec vulputate eget arcu in enim justo rhoncus ut
                                 imperdiet venenatis vitae justo.</p>
                             <a class="text-base text-base-dark-hover text-size-13" href="properties-full-list.html">Read
